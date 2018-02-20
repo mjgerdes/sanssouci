@@ -16,3 +16,8 @@ dungeme/
     examples/
 	    coc.js - Caves of Chaos example dungeon.
 		    station.js SciFi example dungeon
+			ttplayer/
+			  1/ - Channel 1, background music
+			    2/ - Channel 2, repeating effects
+				  3/ - Channel 3 complex one time effects
+			  ttplayer.py - Very simple music player designed to be remote controlled and play music hassle free with just keywords.
