@@ -1,0 +1,823 @@
+* Denizens
+** Giant Crab . 13 HP 15 AC  $ Claw +3 1d6 +1
+beast, Medium 30 ft., swim 30 ft., unaligned, CR 1/8
+*** init + 2
+Giant Crab 13 HP 15 AC
+Claw +3 1d6 +1
+---
+*** HP 13 3d8 ; AC 15
+blindsight 30 ft., passive Perception 9
+
+*** actions
+**** Claw, +3, 1d6 +1
+Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage, and the target is grappled (escape DC 11). The crab has two claws, each of which can grapple only one target.
+*** traits
+**** Amphibious, +0
+The crab can breathe air and water.
+*** stats
+1, 2, 0
+-5, -1, -4
+*** skills
+stealth 4
+
+** Ochre Jelly . 45 HP 8 AC  $ Pseudopod +4 2d6 +2
+ooze, Large 10 ft., climb 10 ft., unaligned, CR 2
+*** HP 45 6d10 ; AC 8
+blindsight 60 ft. (blind beyond this radius), passive Perception 8
+
+Resistance: acid
+Immunities
+Damage: lightning, slashing
+Conditions: blinded, charmed, deafened, exhaustion, frightened, prone
+*** actions
+**** Pseudopod, +4, 2d6 +2
+Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage plus 3 (1d6) acid damage.
+*** reactions
+**** Split, +0
+When a jelly that is Medium or larger is subjected to lightning or slashing damage, it splits into two new jellies if it has at least 10 hit points. Each new jelly has hit points equal to half the original jelly's, rounded down. New jellies are one size smaller than the original jelly.
+*** traits
+**** Amorphous, +0
+The jelly can move through a space as narrow as 1 inch wide without squeezing.
+**** Spider Climb, +0
+The jelly can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+*** stats
+2, -2, 2
+-4, -2, -5
+** Black Pudding . 85 HP 7 AC  $ Pseudopod +5 1d6 + 4d8 +3
+ooze, Large 20 ft., climb 20 ft., unaligned, CR 4
+*** HP 85 10d10 ; AC 7
+blindsight 60 ft. (blind beyond this radius), passive Perception 8
+
+Immunities
+Damage: acid, cold, lightning, slashing
+Conditions: blinded, charmed, deafened, exhaustion, frightened, prone
+*** actions
+**** Pseudopod, +5, 1d6 + 4d8 +3
+Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage plus 18 (4d8) acid damage. In addition, nonmagical armor worn by the target is partly dissolved and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.
+*** reactions
+**** Split, +0
+When a pudding that is Medium or larger is subjected to lightning or slashing damage, it splits into two new puddings if it has at least 10 hit points. Each new pudding has hit points equal to half the original pudding's, rounded down. New puddings are one size smaller than the original pudding.
+*** traits
+**** Amorphous, +0
+The pudding can move through a space as narrow as 1 inch wide without squeezing.
+**** Corrosive Form, +0, 1d8
+A creature that touches the pudding or hits it with a melee attack while within 5 feet of it takes 4 (1d8) acid damage. Any nonmagical weapon made of metal or wood that hits the pudding corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the pudding is destroyed after dealing damage. The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.
+**** Spider Climb, +0
+The pudding can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+*** stats
+3, -3, 3
+-5, -2, -5
+
+** Goblin . 7 HP 15 AC  $ Scimitar +4 1d6 +2 $ Shortbow +4 1d6 +2
+humanoid (goblinoid) , Small 30 ft., neutral evil, CR 1/4
+*** HP 7 2d6 ; AC 15
+darkvision 60 ft., passive Perception 9
+Common, Goblin
+*** actions
+**** Scimitar, +4, 1d6 +2
+Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage.
+**** Shortbow, +4, 1d6 +2
+Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage.
+*** traits
+**** Nimble Escape, +0
+The goblin can take the Disengage or Hide action as a bonus action on each of its turns.
+*** stats
+-1, 2, 0
+0, -1, -1
+*** skills
+stealth 6
+
+** Acolyte . 9 HP 10 AC  $ Club +2 1d4
+humanoid (any race) , Medium 30 ft., any alignment, CR 1/4
+*** HP 9 2d8 ; AC 10
+passive Perception 12
+any one language (usually Common)
+*** actions
+**** Club, +2, 1d4
+Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.
+*** traits
+**** Spellcasting, +0
+The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The acolyte has following cleric spells prepared:
+
+• Cantrips (at will): light, sacred flame, thaumaturgy
+• 1st level (3 slots): bless, cure wounds, sanctuary
+*** stats
+0, 0, 0
+0, 2, 0
+*** skills
+religion 2
+medicine 4
+
+* Gelatinous Bathroom
+*** init + -4
+Gelatinous Cube 
+2 HP 6 AC
+lPseudopod +4 3d6 
+Engulf +0
+---
+
+** Gelatinous Cube . 84 HP 6 AC  $ Pseudopod +4 3d6 $ Engulf +0
+ooze, Large 15 ft., unaligned, CR 2
+*** init + -4
+Gelatinous Cube 84 HP 6 AC
+Pseudopod +4 3d6 
+Engulf +0
+---
+*** HP 84 8d10 ; AC 6
+blindsight 60 ft. (blind beyond this radius), passive Perception 8
+
+Immunities
+Conditions: blinded, charmed, deafened, exhaustion, frightened, prone
+*** actions
+**** Pseudopod, +4, 3d6
+Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 10 (3d6) acid damage.
+**** Engulf, +0
+The cube moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. Whenever the cube enters a creature's space, the creature must make a DC 12 Dexterity saving throw.
+On a successful save, the creature can choose to be pushed 5 feet back or to the side of the cube. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.
+ On a failed save, the cube enters the creature's space, and the creature takes 10 (3d6) acid damage and is engulfed. The engulfed creature can't breathe, is restrained, and takes 21 (6d6) acid damage at the start of each of the cube's turns. When the cube moves, the engulfed creature moves with it.
+An engulfed creature can try to escape by taking an action to make a DC 12 Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the cube.
+*** traits
+**** Ooze Cube, +0
+The cube takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube's Engulf and has disadvantage on the saving throw.
+Creatures inside the cube can be seen but have total cover.
+A creature within 5 feet of the cube can take an action to pull a creature or object out of the cube. Doing so requires a successful DC 12 Strength check, and the creature making the attempt takes 10 (3d6) acid damage.
+The cube can hold only one Large creature or up to four Medium or smaller creatures inside it at a time.
+**** Transparent, +0
+Even when the cube is in plain sight, it takes a successful DC 15 Wisdom (Perception) check to spot a cube that has neither moved nor attacked. A creature that tries to enter the cube's space while unaware of the cube is surprised by the cube.
+*** stats
+2, -4, 5
+-5, -2, -5
+
+* Ogre Cave
+*** init + -1
+Ogre 59 HP 11 AC
+Greatclub +6 2d8 +4 
+Javelin +6 2d6 +4
+---
+
+** Ogre . 59 HP 11 AC  $ Greatclub +6 2d8 +4 $ Javelin +6 2d6 +4
+giant, Large 40 ft., chaotic evil, CR 2
+*** init + -1
+Ogre 59 HP 11 AC
+Greatclub +6 2d8 +4 
+Javelin +6 2d6 +4
+---
+*** HP 59 7d10 ; AC 11
+darkvision 60 ft., passive Perception 8
+Common, Giant
+*** actions
+**** Greatclub, +6, 2d8 +4
+Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage.
+**** Javelin, +6, 2d6 +4
+Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 11 (2d6 + 4) piercing damage.
+*** stats
+4, -1, 3
+-3, -2, -2
+
+* Spider tunnel
+2 Giant spiders in their webs
+*** init + 3
+Giant Spider 26 HP 14 AC
+Bite +5 1d8 +3 
+Web (Recharge 5-6) +5
+---
+
+
+** Giant Spider . 26 HP 14 AC  $ Bite +5 1d8 +3 $ Web (Recharge 5-6) +5
+beast, Large 30 ft., climb 30 ft., unaligned, CR 1
+*** init + 3
+Giant Spider 26 HP 14 AC
+Bite +5 1d8 +3 
+Web (Recharge 5-6) +5
+---
+*** HP 26 4d10 ; AC 14
+blindsight 10 ft., darkvision 60 ft., passive Perception 10
+
+*** actions
+**** Bite, +5, 1d8 +3
+Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 7 (1d8 + 3) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.
+**** Web (Recharge 5-6), +5
+Ranged Weapon Attack: +5 to hit, range 30/60 ft., one creature. Hit: The target is restrained by webbing. As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage).
+*** traits
+**** Spider Climb, +0
+The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+**** Web Sense, +0
+While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.
+**** Web Walker, +0
+The spider ignores movement restrictions caused by webbing.
+*** stats
+2, 3, 1
+-4, 0, -3
+*** skills
+stealth 7
+
+* Water lake
+*** init + 1
+Cave Fisher 58 HP 16 AC
+Multiattack +0 
+Claws +5 2d6 +3 
+Filament +0
+---
+
+** Cave Fisher . 58 HP 16 AC  $ Multiattack +0 $ Claws +5 2d6 +3 $ Filament +0
+Monstrosity, Medium 20 ft. Clim: 20 ft., Unaligned, CR 3
+*** init + 1
+Cave Fisher 58 HP 16 AC
+Multiattack +0 
+Claws +5 2d6 +3 
+Filament +0
+---
+*** HP 58 9d8+18 ; AC 16
+Blindsight 60 ft., passive Perception 12
+
+*** actions
+**** Multiattack, +0
+The cave fisher makes two attacks with its claws.
+**** Claws, +5, 2d6 +3
+Melee Weapon Attack: +5 to hit, reach S ft., one target. Hit: 10 {2d6 + 3) slashing damage.
+**** Filament, +0
+One creature grappled by the cave fisher's adhesive filament must make a DC 13 Strength saving throw, provided that the target weighs 200 pounds or less. On a failure, the target is pulled into an unoccupied space within S feet of the cave fisher, and the cave fisher makes a claw attack against it as a bonus action. Reeling up the target releases anyone else who was attached to the filament. Until the grapple ends on the target, the cave fisher can't extrude another filament.
+*** traits
+**** Adhesive Filament
+The cave fisher can use its action to extend a sticky filament up to 60 feet, and the filament adheres to anything that touches it. A creature adhered to the filament is grappled by the cave fisher {escape DC 13), and ability checks made to escape this grapple have disadvantage. The filament can be attacked (AC 15; 5 hit points; immunity to poison and psychic damage), but a weapon that fails to sever it becomes stuck to it, requiring an action and a successful DC 13 Strength check to pull free. Destroying the filament deals no damage to the cave fisher, which can extrude a replacement filament on its next turn.
+**** Flammable Blood
+If the cave fisher drops to half its hit points or fewer, it gains vulnerability to fire damage.
+**** Spider Climb
+The cave fisher can climb difficult surfaces including upside down on ceilings, without needing to make an ability check.
+*** stats
+3, 1, 2
+-4, 0, -4
+*** skills
+perception 2
+stealth 5
+
+* under the well 
+** Gibbering Mouther . 67 HP 9 AC  $ Multiattack +0 $ Bites +2 5d6 $ Blinding Spittle (Recharge 5-6) +0
+aberration, Medium 10 ft., swim 10 ft., neutral, CR 2
+*** Gibbering Mouther init + -1
+GM1 67 HP 9 AC
+Multiattack +0 
+Bites +2 5d6 
+Blinding Spittle (Recharge 5-6) +0
+---
+*** HP 67 9d8 ; AC 9
+darkvision 60 ft., passive Perception 10
+
+Immunities
+Conditions: prone
+*** actions
+**** Multiattack, +0
+The gibbering mouther makes one bite attack and, if it can, uses its Blinding Spittle.
+**** Bites, +2, 5d6
+Melee Weapon Attack: +2 to hit, reach 5 ft., one creature. Hit: 17 (5d6) piercing damage. If the target is Medium or smaller, it must succeed on a DC 10 Strength saving throw or be knocked prone. If the target is killed by this damage, it is absorbed into the mouther.
+**** Blinding Spittle (Recharge 5-6), +0
+The mouther spits a chemical glob at a point it can see within 15 feet of it. The glob explodes in a blinding flash of light on impact. Each creature within 5 feet of the flash must succeed on a DC 13 Dexterity saving throw or be blinded until the end of the mouther's next turn.
+*** traits
+**** Aberrant Ground, +0
+The ground in a 10-foot radius around the mouther is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a DC 10 Strength saving throw or have its speed reduced to 0 until the start of its next turn.
+**** Gibbering, +0
+The mouther babbles incoherently while it can see any creature and isn't incapacitated. Each creature that starts its turn within 20 feet of the mouther and can hear the gibbering must succeed on a DC 10 Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn and rolls a d8 to determine what it does during its turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action or bonus action and uses all its movement to move in a randomly determined direction. On a 7 or 8, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack.
+*** stats
+0, -1, 3
+-4, 0, -2
+
+* smithy
+
+
+
+
+
+
+
+*** Kobold Dragonshield init + 2
+KD11 HP 15 AC
+Multiattack 
+Spear +3 1d6 +1
+---
+
+*** 3 Rust Monster init + 1
+
+RM2 8 HP 14 AC
+
+Bite +3 1d8 +1 
+Antennae +0
+---
+
+* Mushroom Farm
+*** 4 Kobold init + 2
+K1 5 HP 12 AC
+K2 5 HP 12 AC
+K3 5 HP 12 AC
+K4 5 HP 12 AC
+Dagger +4 1d4 +2 
+Sling +4 1d4 +2
+---
+
+*** 5 Violet Fungus init + -5
+VF1 18 HP 5 AC
+VF2 18 HP 5 AC
+VF3 18 HP 5 AC
+VF4 18 HP 5 AC
+VF5 18 HP 5 AC
+Multiattack +0 
+Rotting Touch +2 1d8
+---
+*** 2 Kobold Inventor init + 2
+KI1 13 HP 12 AC
+KI2 13 HP 12 AC
+Dagger +4 1d4 +2 
+Sling +4 1d4 +2 
+Weapon Invention +0
+---
+
+
+
+*** init + -5
+Violet Fungus 18 HP 5 AC
+Multiattack +0 
+Rotting Touch +2 1d8
+---
+*** HP 18 4d8 ; AC 5
+blindsight 30 ft. (blind beyond this radius), passive Perception 6
+
+Immunities
+Conditions: blinded, deafened, frightened
+*** actions
+**** Multiattack, +0
+The fungus makes 1d4 Rotting Touch attacks.
+**** Rotting Touch, +2, 1d8
+Melee Weapon Attack: +2 to hit, reach 10 ft., one creature. Hit: 4 (1d8) necrotic damage.
+*** traits
+**** False Appearance, +0
+While the violet fungus remains motionless, it is indistinguishable from an ordinary fungus.
+*** stats
+-4, -5, 0
+-5, -4, -5
+
+* zoo
+*** 5 Kobold init + 2
+K1 5 HP 12 AC
+K2 5 HP 12 AC
+K3 5 HP 12 AC
+K4 5 HP 12 AC
+K5 5 HP 12 AC
+Dagger +4 1d4 +2 
+Sling +4 1d4 +2
+---
+
+*** Lion init + 2
+L1 26 HP 12 AC
+Bite +5 1d8 +3 
+Claw +5 1d6 +3
+---
+
+*** Giant Goat init + 0
+GG1 19 HP 11 AC
+Ram +5 2d4 +3
+---
+
+*** 2 Kobold Inventor init + 2
+KI1 13 HP 12 AC
+KI2 13 HP 12 AC
+Dagger +4 1d4 +2 
+Sling +4 1d4 +2 
+Weapon Invention +0
+---
+
+* escape tunnel and hatchery
+*** 2 Kobold Dragonshield init + 2
+KD1 44 HP 15 AC
+KD2 44 HP 15 AC
+Multiattack 
+Spear +3 1d6 +1
+---
+
+*** 8 Kobold init + 2
+K1 5 HP 12 AC
+K2 5 HP 12 AC
+K3 5 HP 12 AC
+K4 5 HP 12 AC
+K5 5 HP 12 AC
+K6 5 HP 12 AC
+K7 5 HP 12 AC
+K8 5 HP 12 AC
+Dagger +4 1d4 +2 
+Sling +4 1d4 +2
+---
+
+* temple
+Two parties meet, 3 way fight, resolve fight with extra rules. Extra rules cannot kill ogre, acolyte or dragonshield or sorceror
+** kobolds
+*** Kobold Dragonshield init + 2
+KD1 44 HP 15 AC
+Multiattack 
+Spear +3 1d6 +1
+---
+
+*** Kobold Scale Sorceror init + 2
+KSS1 27 HP 15 AC
+Dagger +2 1d4
+---
+
+*** Kobold Inventor init + 2
+KI1 13 HP 12 AC
+Dagger +4 1d4 +2 
+Sling +4 1d4 +2 
+Weapon Invention +0
+---
+
+*** 6 Kobold init + 2
+K1 5 HP 12 AC
+K2 5 HP 12 AC
+K3 5 HP 12 AC
+K4 5 HP 12 AC
+K5 5 HP 12 AC
+K6 5 HP 12 AC
+Dagger +4 1d4 +2 
+Sling +4 1d4 +2
+---
+
+
+
+** Goblins
+*** Acolyte init + 0
+A1 9 HP 10 AC
+Club +2 1d4
+---
+
+*** 6 Goblin init + 2
+G1 7 HP 15 AC
+G2 7 HP 15 AC
+G3 7 HP 15 AC
+G4 7 HP 15 AC
+G5 7 HP 15 AC
+G6 7 HP 15 AC
+Scimitar +4 1d6 +2 
+Shortbow +4 1d6 +2
+---
+
+*** Ogre init + -1
+O1 59 HP 11 AC
+Greatclub +6 2d8 +4 
+Javelin +6 2d6 +4
+---
+
+* demon summoning
+*** 2 Quasit init + 3
+Q1 7 HP 13 AC
+Q2 7 HP 13 AC
+Claw (Bite in Beast Form) +4 1d4 +3 
+Scare (1/day) +0 
+Invisibility +0
+---
+
+*** 2 Dretch init + 0
+D1 18 HP 11 AC
+D2 18 HP 11 AC
+Multiattack +0 
+Bite +2 1d6 
+Claws +2 2d4 
+Fetid Cloud (1/Day) +0
+---
+
+*** 2 Vargouille init + 2
+V1 13 HP 12 AC
+V2 13 HP 12 AC
+Bite +4 1d6 + 3d6 +2 
+Kiss +0 
+Stunning Shriek +0
+---
+
+
+* F1 Magma 
+Portal opens during earthquake spewing 1d4 mephits and a magman out.
+*** 3 Magma Mephit init + 1
+
+
+
+
+
+
+Claws +3 1d4 +1 
+Fire Breath (Recharge 6) +0 
+Variant: Summon Mephits (1/Day) +0
+---
+
+*** Azer init + 1
+A1 6 HP 17 AC
+Warhammer +5 1d8 + 1d6 +3
+---
+
+
+
+** Magma Mephit . 22 HP 11 AC  $ Claws +3 1d4 +1 $ Fire Breath (Recharge 6) +0 $ Variant: Summon Mephits (1/Day) +0
+elemental, Small 30 ft., fly 30 ft., neutral evil, CR 1/2
+*** init + 1
+Magma Mephit 22 HP 11 AC
+Claws +3 1d4 +1 
+Fire Breath (Recharge 6) +0 
+Variant: Summon Mephits (1/Day) +0
+---
+*** HP 22 5d6 ; AC 11
+darkvision 60 ft., passive Perception 10
+Ignan, Terran
+Damage Vulnerabilities: cold
+Immunities
+Damage: fire, poison
+Conditions: poisoned
+*** actions
+**** Claws, +3, 1d4 +1
+Melee Weapon Attack: +3 to hit, reach 5 ft ., one creature. Hit: 3 (1d4 + 1) slashing damage plus 2 (1d4) fire damage.
+**** Fire Breath (Recharge 6), +0
+The mephit exhales a 15-foot cone of fire. Each creature in that area must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one.
+**** Variant: Summon Mephits (1/Day), +0
+The mephit has a 25 percent chance of summoning 1d4 mephits of its kind. A summoned mephit appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other mephits. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action.
+*** traits
+**** Death Burst, +0, 2d6
+When the mephit dies, it explodes in a burst of lava. Each creature within 5 ft. of it must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one.
+**** False Appearance, +0
+While the mephit remains motionless, it is indistinguishable from an ordinary mound of magma.
+**** Innate Spellcasting (1/Day), +0
+The mephit can innately cast heat metal (spell save DC 10), requiring no material components. Its innate spellcasting ability is Charisma.
+*** stats
+-1, 1, 1
+-2, 0, 0
+*** skills
+stealth 3
+* F2 Kobold Magic Squad
+The Scale Sorceror Qwuuf is leading his squad to vanquish the heroes.
+1 scale sorceror, 2 inventor and 6
+*** Guard Drake init + 0
+GD 9  HP 14 AC
+Multiattack 
+Bite +5 1d8 +3 
+Tail +5 1d6 +3
+---
+
+*** 5 Kobold init + 2
+
+
+
+K5 5 HP 12 AC
+Dagger +4 1d4 +2 
+Sling +4 1d4 +2
+---
+
+
+
+Dagger +2 1d4
+---
+
+** Kobold . 5 HP 12 AC  $ Dagger +4 1d4 +2 $ Sling +4 1d4 +2
+humanoid (kobold) , Small 30 ft., lawful evil, CR 1/8
+*** init + 2
+Kobold 5 HP 12 AC
+Dagger +4 1d4 +2 
+Sling +4 1d4 +2
+---
+*** HP 5 2d6 ; AC 12
+darkvision 60 ft., passive Perception 8
+Common, Draconic
+*** actions
+**** Dagger, +4, 1d4 +2
+Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage.
+**** Sling, +4, 1d4 +2
+Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 4 (1d4 + 2) bludgeoning damage.
+*** traits
+**** Sunlight Sensitivity, +0
+While in sunlight, the kobold has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+**** Pack Tactics, +0
+The kobold has advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+*** stats
+-2, 2, -1
+-1, -2, -1
+
+
+** Kobold Scale Sorceror . 27 HP 15 AC  $ Dagger +2 1d4
+humanoid (Kobold) , Small 30 ft., Lawful Evil, CR 1
+*** init + 2
+Kobold Scale Sorceror 27 HP 15 AC
+Dagger +2 1d4
+---
+*** HP 27 5d6+10 ; AC 15
+Darkvision 60 ft, passive Perception 9
+Common, Draconic
+*** actions
+**** Dagger, +2, 1d4
+Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft.or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.
+*** traits
+**** Spellcasting, +0
+ The kobold is a 3rd-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It has the following sorcerer spells prepared:
+Cantrips (at will): fire boli, mage hand, mending, poison spray
+1st level (4 slots): charm person, chromatic orb, expeditious retreat
+2nd level (2 slots): scorching ray
+**** Sorcery Points, +0
+The kobold has 3 sorcery points. It can spend 1 or more sorcery points as a bonus action to gain one of the following benefits:
+Heightened Spell: When it casts a spell that forces a creature to make a saving throw to resist the spell's effects, the kobold can spend 3 sorcery points to give one target of the spell disadvantage on its first saving throw against the spell.
+Subtle Spell: When the kobold casts a spell, it can spend 1 sorcery point to cast the spell without any somatic or verbal components.
+**** Sunlight Sensitivity, +0
+While in sunlight, the kobold has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+**** Pack Tactics, +0
+The kobold has advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+*** stats
+-2, 2, 2
+0, -1, 2
+*** skills
+arcana 2
+medicine 1
+
+* F3 Goblin Scouts
+3 goblins, a goblin priest and a death dog
+*** Death Dog init + 2
+DD1 39 HP 12 AC
+Multiattack +0 
+Bite +4 1d6 +2
+---
+
+*** Acolyte init + 0
+A1 9 HP 10 AC
+Club +2 1d4
+---
+
+*** 3 Goblin init + 2
+G1 7 HP 15 AC
+G2 7 HP 15 AC
+G3 7 HP 15 AC
+Scimitar +4 1d6 +2 
+Shortbow +4 1d6 +2
+---
+
+* F4 Wildlife
+* F5 Wildlife
+Pick any of the following very random cave dwellers.
+
+** Owlbear . 59 HP 13 AC  $ Multiattack +0 $ Beak +7 1d10 +5 $ Claws +7 2d8 +5
+monstrosity, Large 40 ft., unaligned, CR 3
+*** init + 1
+Owlbear 59 HP 13 AC
+Multiattack +0 
+Beak +7 1d10 +5 
+Claws +7 2d8 +5
+---
+*** HP 59 7d10 ; AC 13
+darkvision 60 ft., passive Perception 13
+
+*** actions
+**** Multiattack, +0
+The owlbear makes two attacks: one with its beak and one with its claws.
+**** Beak, +7, 1d10 +5
+Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 10 (1d10 + 5) piercing damage.
+**** Claws, +7, 2d8 +5
+Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage.
+*** traits
+**** Keen Sight and Smell, +0
+The owlbear has advantage on Wisdom (Perception) checks that rely on sight or smell.
+*** stats
+5, 1, 3
+-4, 1, -2
+*** skills
+perception 3
+
+** Cave Bear . 42 HP 12 AC  $ Multiattack +0 $ Bite +7 1d8 +5 $ Claws +7 2d6 +5
+beast, Large 40 ft., swim 30 ft., unaligned, CR 2
+*** init + 0
+Cave Bear 42 HP 12 AC
+Multiattack +0 
+Bite +7 1d8 +5 
+Claws +7 2d6 +5
+---
+*** HP 42 5d10 ; AC 12
+darkvision 60 ft., passive Perception 13
+
+*** actions
+**** Multiattack, +0
+The bear makes two attacks: one with its bite and one with its claws.
+**** Bite, +7, 1d8 +5
+Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 9 (1d8 + 5) piercing damage.
+**** Claws, +7, 2d6 +5
+Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage.
+*** traits
+**** Keen Smell, +0
+The bear has advantage on Wisdom (Perception) checks that rely on smell.
+*** stats
+5, 0, 3
+-4, 1, -2
+*** skills
+perception 3
+
+** Ochre Jelly . 45 HP 8 AC  $ Pseudopod +4 2d6 +2
+ooze, Large 10 ft., climb 10 ft., unaligned, CR 2
+*** init + -2
+Ochre Jelly 45 HP 8 AC
+Pseudopod +4 2d6 +2
+---
+*** HP 45 6d10 ; AC 8
+blindsight 60 ft. (blind beyond this radius), passive Perception 8
+
+Resistance: acid
+Immunities
+Damage: lightning, slashing
+Conditions: blinded, charmed, deafened, exhaustion, frightened, prone
+*** actions
+**** Pseudopod, +4, 2d6 +2
+Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage plus 3 (1d6) acid damage.
+*** reactions
+**** Split, +0
+When a jelly that is Medium or larger is subjected to lightning or slashing damage, it splits into two new jellies if it has at least 10 hit points. Each new jelly has hit points equal to half the original jelly's, rounded down. New jellies are one size smaller than the original jelly.
+*** traits
+**** Amorphous, +0
+The jelly can move through a space as narrow as 1 inch wide without squeezing.
+**** Spider Climb, +0
+The jelly can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+*** stats
+2, -2, 2
+-4, -2, -5
+
+** Wererat . 33 HP 12 AC  $ Multiattack (Humanoid or Hybrid Form Only) +0 $ Bite (Rat or Hybrid Form Only). +4 1d4 +2 $ Shortsword (Humanoid or Hybrid Form Only) +4 1d6 +2 $ Hand Crossbow (Humanoid or Hybrid Form Only) +4 1d6 +2
+humanoid (human) , Medium 30 ft., lawful evil, CR 2
+*** init + 2
+Wererat 33 HP 12 AC
+Multiattack (Humanoid or Hybrid Form Only) +0 
+Bite (Rat or Hybrid Form Only). +4 1d4 +2 
+Shortsword (Humanoid or Hybrid Form Only) +4 1d6 +2 
+Hand Crossbow (Humanoid or Hybrid Form Only) +4 1d6 +2
+---
+*** HP 33 6d8 ; AC 12
+darkvision 60 ft. (rat form only), passive Perception 12
+Common (can't speak in rat form)
+Immunities
+Damage: bludgeoning, piercing, and slashing damage from nonmagical weapons that aren't silvered
+*** actions
+**** Multiattack (Humanoid or Hybrid Form Only), +0
+The wererat makes two attacks, only one of which can be a bite.
+**** Bite (Rat or Hybrid Form Only)., +4, 1d4 +2
+Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage. If the target is a humanoid, it must succeed on a DC 11 Constitution saving throw or be cursed with wererat lycanthropy.
+**** Shortsword (Humanoid or Hybrid Form Only), +4, 1d6 +2
+Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.
+**** Hand Crossbow (Humanoid or Hybrid Form Only), +4, 1d6 +2
+Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage.
+*** traits
+**** Shapechanger, +0
+The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+**** Keen Smell, +0
+The wererat has advantage on Wisdom (Perception) checks that rely on smell.
+*** stats
+0, 2, 1
+0, 0, -1
+*** skills
+perception 2
+stealth 4
+
+** Lion . 26 HP 12 AC  $ Bite +5 1d8 +3 $ Claw +5 1d6 +3
+beast, Large 50 ft., unaligned, CR 1
+*** init + 2
+Lion 26 HP 12 AC
+Bite +5 1d8 +3 
+Claw +5 1d6 +3
+---
+*** HP 26 4d10 ; AC 12
+passive Perception 13
+
+*** actions
+**** Bite, +5, 1d8 +3
+Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage.
+**** Claw, +5, 1d6 +3
+Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.
+*** traits
+**** Keen Smell, +0
+The lion has advantage on Wisdom (Perception) checks that rely on smell.
+**** Pack Tactics, +0
+The lion has advantage on an attack roll against a creature if at least one of the lion's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+**** Pounce, +0
+If the lion moves at least 20 ft. straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the lion can make one bite attack against it as a bonus action.
+**** Running Leap, +0
+With a 10-foot running start, the lion can long jump up to 25 ft..
+*** stats
+3, 2, 1
+-4, 1, -1
+*** skills
+perception 3
+stealth 6
+* F6 Goblins
+*** Acolyte init + 0
+A1 9 HP 10 AC
+Club +2 1d4
+---
+
+*** 6 Goblin init + 2
+G1 7 HP 15 AC
+G2 7 HP 15 AC
+G3 7 HP 15 AC
+G4 7 HP 15 AC
+G5 7 HP 15 AC
+G6 7 HP 15 AC
+Scimitar +4 1d6 +2 
+Shortbow +4 1d6 +2
+---
+
+*** Ogre init + -1
+O1 59 HP 11 AC
+Greatclub +6 2d8 +4 
+Javelin +6 2d6 +4
+---
+

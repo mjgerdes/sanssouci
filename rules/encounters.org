@@ -1,0 +1,460 @@
+* Sausy druid
+Druid is fucking a bear. 200 gold Chain around transformed druids neck.
+Dr 6
+
+
+
+
+humanoid (any race) , Medium 30 ft., any alignment, CR 2
+*** HP 27 5d8 ; AC 11
+passive Perception 14
+Druidic plus any two languages
+*** actions
+**** Quarterstaff, +2, 1d6
+Melee Weapon Attack: +2 to hit (+4 to hit with shillelagh), reach 5 ft., one target. Hit: 3 (1d6) bludgeoning damage, or 6 (1d8 + 2) bludgeoning damage with shillelagh or if wielded with two hands.
+*** traits
+**** Spellcasting, +0
+The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It has the following druid spells prepared:
+
+• Cantrips (at will): druidcraft, produce flame, shillelagh
+• 1st level (4 slots): entangle, longstrider, speak with animals, thunderwave
+• 2nd level (3 slots): animal messenger, barkskin
+*** stats
+0, 1, 1
+1, 2, 0
+*** skills
+nature 3
+medicine 4
+perception 4
+Bite +3 1d6 +2 $ 
+Claws +3 2d4 +2
+** Druid . 27 HP 11 AC  $ Quarterstaff +2 1d6
+humanoid (any race) , Medium 30 ft., any alignment, CR 2
+*** HP 27 5d8 ; AC 11
+passive Perception 14
+Druidic plus any two languages
+*** actions
+**** Quarterstaff, +2, 1d6
+Melee Weapon Attack: +2 to hit (+4 to hit with shillelagh), reach 5 ft., one target. Hit: 3 (1d6) bludgeoning damage, or 6 (1d8 + 2) bludgeoning damage with shillelagh or if wielded with two hands.
+*** traits
+**** Spellcasting, +0
+The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It has the following druid spells prepared:
+
+• Cantrips (at will): druidcraft, produce flame, shillelagh
+• 1st level (4 slots): entangle, longstrider, speak with animals, thunderwave
+• 2nd level (3 slots): animal messenger, barkskin
+*** stats
+0, 1, 1
+1, 2, 0
+*** skills
+nature 3
+medicine 4
+perception 4
+
+** Black Bear . 19 HP 11 AC  $ Multiattack +0 $ Bite +3 1d6 +2 $ Claws +3 2d4 +2
+beast, Medium 40 ft., climb 30 ft., unaligned, CR 1/2
+*** HP 19 3d8 ; AC 11
+passive Perception 13
+
+*** actions
+**** Multiattack, +0
+The bear makes two attacks: one with its bite and one with its claws.
+**** Bite, +3, 1d6 +2
+Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.
+**** Claws, +3, 2d4 +2
+Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) slashing damage.
+*** traits
+**** Keen Smell, +0
+The bear has advantage on Wisdom (Perception) checks that rely on smell.
+*** stats
+2, 0, 2
+-4, 1, -2
+
+* Ogre Soccer
+Party encounters 2d20 Ogres. Ogres are celebrating Ogrim's day with a game of soccer and are not intent on killing the party. They do force them to play along though.
+Ogres do not understand soccer rules and will happily fight during the game. Use athletics rolls to figure things out.
+Game ends if one team scores a goal.
+** Ogre . 59 HP 11 AC  $ Greatclub +6 2d8 +4 $ Javelin +6 2d6 +4
+giant, Large 40 ft., chaotic evil, CR 2
+*** HP 59 7d10 ; AC 11
+darkvision 60 ft., passive Perception 8
+Common, Giant
+*** actions
+**** Greatclub, +6, 2d8 +4
+Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage.
+**** Javelin, +6, 2d6 +4
+Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 11 (2d6 + 4) piercing damage.
+*** stats
+4, -1, 3
+-3, -2, -2
+
+* Rogers grave 
+Grave of Roger. Read the poem
+* Nature temple 
+Small offering bowl carved into crown of tree with ornaments
+Religion check DC 15 to figure out
+Bowl contains 100gp worth of diamonds
+If diamonds are taken, call ightning is cast on the group
+* Wolves
+2d8 wolves appear and want food
+** Wolf . 11 HP 13 AC  $ Bite +4 2d4 +2
+beast, Medium 40 ft., unaligned, CR 1/4
+*** HP 11 2d8 ; AC 13
+passive Perception 13
+
+*** actions
+**** Bite, +4, 2d4 +2
+Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
+*** traits
+**** Keen Hearing and Smell, +0
+The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+**** Pack Tactics, +0
+The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+*** stats
+1, 2, 1
+-4, 1, -2
+*** skills
+perception 3
+stealth 4
+
+*  Hippogriff looking to feed young
+A hippogriff circles the party until it spots weakness. Then it attacks; if someone dies he is carried off to the nest, where the party might save him. Hyppogriff has 1/4 chance to fly away if damages reduces it to below half hp
+** Hippogriff . 19 HP 11 AC  $ Multiattack +0 $ Beak +5 1d10 +3 $ Claws +5 2d6 +3
+monstrosity, Large 40 ft, fly 60 ft., unaligned, CR 1
+*** HP 19 3d10 ; AC 11
+passive Perception 15
+
+*** actions
+**** Multiattack, +0
+The hippogriff makes two attacks: one with its beak and one with its claws.
+**** Beak, +5, 1d10 +3
+Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 8 (1d10 + 3) piercing damage.
+**** Claws, +5, 2d6 +3
+Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage.
+*** traits
+**** Keen Sight, +0
+The hippogriff has advantage on Wisdom (Perception) checks that rely on sight.
+*** stats
+3, 1, 1
+-4, 1, -1
+*** skills
+perception 5
+
+* Dead Weapons Courier
+Players find a corpse of a dead half elf. He has a note saying meet us at nearby Large Lake (3,5)
+Following tracks the players can find the mans wagon with weapons and armor and wine. A delivery to the half price halflings.
+The man has 10 gold 20 silver and 5 copper
+The nearby wagon is being looted by 3 goblins and a goblin priest
+** Goblin . 7 HP 15 AC  $ Scimitar +4 1d6 +2 $ Shortbow +4 1d6 +2
+humanoid (goblinoid) , Small 30 ft., neutral evil, CR 1/4
+*** HP 7 2d6 ; AC 15
+darkvision 60 ft., passive Perception 9
+Common, Goblin
+*** actions
+**** Scimitar, +4, 1d6 +2
+Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage.
+**** Shortbow, +4, 1d6 +2
+Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage.
+*** traits
+**** Nimble Escape, +0
+The goblin can take the Disengage or Hide action as a bonus action on each of its turns.
+*** stats
+-1, 2, 0
+0, -1, -1
+*** skills
+stealth 6
+
+** Acolyte . 9 HP 10 AC  $ Club +2 1d4
+humanoid (any race) , Medium 30 ft., any alignment, CR 1/4
+*** HP 9 2d8 ; AC 10
+passive Perception 12
+any one language (usually Common)
+*** actions
+**** Club, +2, 1d4
+Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.
+*** traits
+**** Spellcasting, +0
+The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The acolyte has following cleric spells prepared:
+
+• Cantrips (at will): light, sacred flame, thaumaturgy
+• 1st level (3 slots): bless, cure wounds, sanctuary
+*** stats
+0, 0, 0
+0, 2, 0
+*** skills
+religion 2
+medicine 4
+
+* Half Price Halflings
+Party meets lahflings who are waiting for a weapons shipment.
+1d6 + 1 Halflings and an acolyte leader
+
+** Bandit . 11 HP 12 AC  $ Scimitar +3 1d6 +1 $ Light Crossbow +3 1d8 +1
+humanoid (any race) , Medium 30 ft., any non-lawful alignment, CR 1/8
+*** HP 11 2d8 ; AC 12
+passive Perception 10
+any one language (usually Common)
+*** actions
+**** Scimitar, +3, 1d6 +1
+Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) slashing damage.
+**** Light Crossbow, +3, 1d8 +1
+Ranged Weapon Attack: +3 to hit, range 80 ft./320 ft., one target. Hit: 5 (1d8 + 1) piercing damage.
+*** stats
+0, 1, 1
+0, 0, 0
+
+** Acolyte . 9 HP 10 AC  $ Club +2 1d4
+humanoid (any race) , Medium 30 ft., any alignment, CR 1/4
+*** HP 9 2d8 ; AC 10
+passive Perception 12
+any one language (usually Common)
+*** actions
+**** Club, +2, 1d4
+Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.
+*** traits
+**** Spellcasting, +0
+The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The acolyte has following cleric spells prepared:
+
+• Cantrips (at will): light, sacred flame, thaumaturgy
+• 1st level (3 slots): bless, cure wounds, sanctuary
+*** stats
+0, 0, 0
+0, 2, 0
+*** skills
+religion 2
+medicine 4
+
+* Satyrs looking to charm
+A dryad and 1d4 + 1 Satyrs are charming/ sleeping the party. One of the satyrs does not attack and merely plays his flute and charms people.
+If the party is charmed/sleeped the stayrs take their treasure and food.
+** Dryad . 22 HP 11 AC  $ Club +2 1d4 $ Fey Charm +0
+fey, Medium 30 ft., neutral, CR 1
+*** HP 22 5d8 ; AC 11
+darkvision 60 ft., passive Perception 14
+Elvish, Sylvan
+*** actions
+**** Club, +2, 1d4
+Melee Weapon Attack: +2 to hit (+6 to hit with shillelagh), reach 5 ft., one target. Hit: 2 (1 d4) bludgeoning damage, or 8 (1d8 + 4) bludgeoning damage with shillelagh.
+**** Fey Charm, +0
+The dryad targets one humanoid or beast that she can see within 30 feet of her. If the target can see the dryad, it must succeed on a DC 14 Wisdom saving throw or be magically charmed. The charmed creature regards the dryad as a trusted friend to be heeded and protected. Although the target isn't under the dryad's control, it takes the dryad's requests or actions in the most favorable way it can.
+Each time the dryad or its allies do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the dryad dies, is on a different plane of existence from the target, or ends the effect as a bonus action. If a target's saving throw is successful, the target is immune to the dryad's Fey Charm for the next 24 hours.
+The dryad can have no more than one humanoid and up to three beasts charmed at a time.
+*** traits
+**** Innate Spellcasting, +0
+The dryad's innate spellcasting ability is Charisma (spell save DC 14). The dryad can innately cast the following spells, requiring no material components:
+
+At will: druidcraft
+3/day each: entangle, goodberry
+1/day each: barkskin, pass without trace, shillelagh
+**** Magic Resistance, +0
+The dryad has advantage on saving throws against spells and other magical effects.
+**** Speak with Beasts and Plants, +0
+The dryad can communicate with beasts and plants as if they shared a language.
+**** Tree Stride, +0
+Once on her turn, the dryad can use 10 ft. of her movement to step magically into one living tree within her reach and emerge from a second living tree within 60 ft. of the first tree, appearing in an unoccupied space within 5 ft. of the second tree. Both trees must be large or bigger.
+*** stats
+0, 1, 0
+2, 2, 4
+*** skills
+perception 4
+stealth 5
+
+** Satyr . 31 HP 14 AC  $ Ram +3 2d4 +1 $ Shortsword +5 1d6 +3 $ Shortbow +5 1d6 +3 $ Variant: Panpipes +0
+fey, Medium 40 ft., chaotic neutral, CR 1/2
+*** HP 31 7d8 ; AC 14
+passive Perception 12
+Common, Elvish, Sylvan
+*** actions
+**** Ram, +3, 2d4 +1
+Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 6 (2d4 + 1) bludgeoning damage.
+**** Shortsword, +5, 1d6 +3
+Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1 d6 + 3) piercing damage.
+**** Shortbow, +5, 1d6 +3
+Ranged Weapon Attack: +5 to hit, range 80/320 ft., one target. Hit: 6 (1d6 + 3) piercing damage.
+**** Variant: Panpipes, +0
+Gentle Lullaby. The creature falls asleep and is unconscious for 1 minute. The effect ends if the creature takes damage or if someone takes an action to shake the creature awake.
+*** traits
+**** Magic Resistance, +0
+The satyr has advantage on saving throws against spells and other magical effects.
+*** stats
+1, 3, 0
+1, 0, 2
+*** skills
+performance 6
+perception 2
+stealth 5
+* barbarian taking a bath
+A Barbarian and his trusty dire wolf. Dire wolf is chained up to a tree, guarding the barbarians pack.
+Contains treasure of 1 healing potion and 40 gold, 12 silcer and 8 copper
+If the dire wolf howls, the barbarian will be there in 3 turns from a nearby lake. This is announced to the party by birds flying up into sky.
+** Veteran . 58 HP 17 AC  $ Multiattack +0 $ Longsword +5 1d8 +3 $ Shortsword +5 1d6 +3 $ Heavy Crossbow +3 1d10 +1
+humanoid (any race) , Medium 30 ft., any alignment, CR 3
+*** HP 58 9d8 ; AC 17
+passive Perception 12
+any one language (usually Common)
+*** actions
+**** Multiattack, +0
+The veteran makes two longsword attacks. If it has a shortsword drawn, it can also make a shortsword attack.
+**** Longsword, +5, 1d8 +3
+Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands.
+**** Shortsword, +5, 1d6 +3
+Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.
+**** Heavy Crossbow, +3, 1d10 +1
+Ranged Weapon Attack: +3 to hit, range 100/400 ft., one target. Hit: 6 (1d10 + 1) piercing damage.
+*** stats
+3, 1, 2
+0, 0, 0
+*** skills
+athletics 5
+perception 2
+
+** Dire Wolf . 37 HP 14 AC  $ Bite +5 2d6 +3
+beast, Large 50 ft., unaligned, CR 1
+*** HP 37 5d10 ; AC 14
+passive Perception 13
+
+*** actions
+**** Bite, +5, 2d6 +3
+Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
+*** traits
+**** Keen Hearing and Smell, +0
+The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+**** Pack Tactics, +0
+The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+*** stats
+3, 2, 2
+-4, 1, -2
+*** skills
+perception 3
+stealth 4
+
+* Giant skeleton of ancient creature
+Half submerged in earth is the ribcage of an enormous beast. The Skull is still there and contains gold teeth worth 150 gold.
+To remove the gold teeth, players must succeed at a DC 15 Athletics check 3 times.
+After the first attempts, swarms of insects appear.
+If the attempt fails the skull collapses and traps the player. A DC 10 Athletics check gets him out. Alternatively the skull can be destroyed (it has AC 5, 20 HP)
+There are 3 Swarms. Remember swarm rules (half attack damage if swarm is half HP, has damage resistance, damage vulnerability to aoe)
+** Swarm of Beetles . 22 HP 12 AC  $ Bites +3 4d4
+swarm of Tiny beasts, Medium 20 ft., burrow 5 ft., climb 20 ft., unaligned, CR 1/2
+*** HP 22 5d8 ; AC 12
+blindsight 10 ft., passive Perception 8
+
+Resistance: bludgeoning, piercing, slashing
+Immunities
+Conditions: charmed, frightened, grappled, paralyzed, petrified, prone, restrained, stunned
+*** actions
+**** Bites, +3, 4d4
+Melee Weapon Attack: +3 to hit, reach 0 ft., one target in the swarm's space. Hit: 10 (4d4) piercing damage, or 5 (2d4) piercing damage if the swarm has half of its hit points or fewer.
+*** traits
+**** Swarm, +0
+The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.
+*** stats
+-4, 1, 0
+-5, -2, -5
+
+
+* cult fanatic bringing skeletal horses
+*** init + 2
+Cult Fanatic 22 HP 13 AC
+Multiattack +0 
+Dagger +4 1d4 +2
+---
+
+*** init + 1
+2 x Warhorse Skeleton 22 HP 13 AC
+Hooves +6 2d6 +4
+---
+
+* riding diseased ogre zombie
+1 ogre zombie, 1 horse, 3 swarms of insects
+
+*** init + 0
+Riding Horse 13 HP 10 AC
+Hooves +5 2d4 +3
+---
+
+*** init + 1
+Swarm of Insects 22 HP 12 AC
+Bites +3 4d4
+---
+
+*** init + 1
+Swarm of Insects 22 HP 12 AC
+Bites +3 4d4
+---
+
+*** init + 1
+Swarm of Insects 22 HP 12 AC
+Bites +3 4d4
+---
+
+*** init + -2
+Ogre Zombie 85 HP 8 AC
+Morningstar +6 2d8 +4
+---
+
+2 Giant Boar
+1350.0
+
+
+
+* 5 acolytes summoning a spirit
+CR 3/3/3/2
+*** init + 0
+A1 9 HP 10 AC, 3 ss
+A2 9 HP 10 AC, 3ss
+A3 9 HP 10 AC 3ss
+A4 9 HP 10 AC, 3ss
+A5 9 HP 10 AC, 3ss
+Club +2 1d4
+Sanctuary, Cure wounds, Bless, DC 12
+---
+*** init + 9
+Will-o'-Wisp 22 HP 19 AC
+Shock +4 2d8 
+Invisibility +0
+Bonus Action: Consume life, DC 10 Con save for 0 HP char or die, on death 3d6 heal to wisp
+---
+* will o wisp of dog
+*** Will-o'-Wisp init + 9
+W1 3 HP 19 AC
+Shock +4 2d8 
+Invisibility +0
+---
+
+*** 3 Blink Dog init + 3
+BD1 7 HP 13 AC
+BD2 22 HP 13 AC
+
+Bite +3 1d6 +1 
+Teleport (Recharge 4-6) +0
+---
+
+* nobles betting on giant goats
+11 nobles are meeting outside and having an illegal betting match on 3 giant goats. The goats are supposed to fight each other, to settle the dispute between three houses: Baenrae (4), Hlaalu (3) and Medici (4)
+The nobles carry (4 + 1d6) * 10 gold, on a successful DC 13 investigation check a masterwork +1 rapier and 11 signed rings worth 110 gold
+*** 11 Noble init + 1
+N1 9 HP 15 AC
+N2 9 HP 15 AC
+N3 9 HP 15 AC
+N4 9 HP 15 AC
+N5 9 HP 15 AC
+N6 9 HP 15 AC
+N7 9 HP 15 AC
+N8 9 HP 15 AC
+N9 9 HP 15 AC
+N10 9 HP 15 AC
+N11 9 HP 15 AC
+Rapier +3 1d8 +1
+---
+
+*** 3 Giant Goat init + 0
+1724 xp : 3/1/1/1
+GG1 19 HP 11 AC
+GG2 19 HP 11 AC
+GG3 19 HP 11 AC
+Ram +5 2d4 +3
+---
+
+
+* 

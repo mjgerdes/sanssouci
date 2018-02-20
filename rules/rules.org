@@ -1,0 +1,353 @@
+* Experience
+Changes are made to the way experience is rewarded. Players no longer earn experience through slaying monsters. Instead, they earn experience for spending treasure that they found in dungeons and brought back to town. This is the most fundamental and drastic change to the rules and heavily impacts the feel of the game. 
+Consequences that may result from this rule change include a heightening of aspects such as:
+ - Strategy;players are incentivized to avoid combat, when no treasure is involved. When there is treasure, the combat is suddenly about something - other than killing everything.
+ - Pacing; the DM may abrubtly declare combat encounters finished once they ran their course; they need not fear to reward experience that is 'unearned'
+ - Grit; the DM is free to use very deadly or unfair monsters, since the players are not forced to kill it to recieve their reward. Fleeing is an option.
+ - Control; experience rewards are physical objects in the world and thereby are in the players hands. If a total party kill happens, nothing is ultimately lost, since the new characters can recover the treasure of the dead group.
+
+On the DM side, this means that encounter design is easier (XP rewards don't matter). Encounter design is also, possibly, more varied, since every encounter can have a clear goal or incentive to complete. The DM still retains control over how much experience is 'out there' by placing treasure, thereby controlling the overall rate of advancement.
+
+These rules do not enhance and sometimes actively hinder aspects such as:
+ - Characterization; PCs motivated to kill monsters for treasure tend not to be functioning individuals with complex emotional landscapes.
+ - Plot; many campaigns feature intricate mysteries, courtly intrigue or devious politics. Not this game! The laser focused reward conditions for the players all but proclude any complex interaction between characters and civilized world. In fact, the game prescribes a certain structure.
+ - Society; Games where PCs search for treasure tend to be spent on their way to treasure or fighting for treasure - in dungeons. The game therefore typically does not feature much civilization, socializing or city life.
+
+In the following, the exact rules for rewarding experience are expounded.
+
+** Getting Experience
+The characters carry treasure with them. This treasure must be tracked on an extra sheet or in a special section on the players character sheet. What types of things can be treasure is explained later, in the encumbrance chapter, but every item of treasure has an associated gold value, for which it can be traded.
+Players gain experience when they find treasure in dungeons or during their travels, and then spend this treasure in town _on something that their character cares about_.
+This may be anything - characters are free to spend all their money on useless jewlery or be completely efficient and invest all their money into platemail for their character. It is also legitimate to buy something for someone else: The money still counts towards the experience of the character who 'chips in' or buys something for someone else. The only requirement is that the money must be spent in order to advance - money that is not spent in the town phase remains on the treasure sheet, simply to be cashed in later.
+** Gold to XP ratio
+To make it especially easy for both players and the DM to understand and master the gold as experience system, the ratio of gold to experience points is 1:1. That means, that a gilded cup worth 400 gp, could be traded in town for 8 healing potions, which would award the player who buys the potions and spends the gold 400 experience points.
+This works out with the prices of items roughly. Note the additional Inspiration Items, detailed in a later section. In many games, money eventually becomes meaningless. This will never be the case in this game - even if the characters do not have anything mechanically useful to spend their money on, the players will always want to earn experience and therefore find reasons to do so and invent expensive vices or extravagant projects.
+If a group of 4 players finds 1000 gold coins, they can bring this treasure home and spend it to individually earn 250 experience points. If it was a 5 player group, every player could get only 200 experience points, if the treasure is split evenly.
+** Splitting
+Generally it is assumed that the group splits treasure evenly. The players (including the DM) may indeed opt to make this an obligatory metagame rule before the game.
+More particularly, nothing in the game prohibits experience stacking, or uneven splitting of treasure in general. This can, indeed, be somewhat convenient for the players, if a single player, for instance, needs only 50 or so experience points to advance and another plaer has 50 spare gold.
+If players try to pool all their gold into one person, let them. It's funny how one high level PC surrounded by level 1 characters can easily die sometimes... In all seriousness: The game can probably withstand such strategies mechanically, but your player group may not - being the player that invests into another players character for 3 sessions is not fun.
+Note again that, as stated above, players do not have to spend money on things for themselves. In other words, experience may not be pooled, but gold may. An example illustrates this:
+The dwarf Alice and the Human Bob return from adventuring with treasure worth 800 gold. They split evenly, and both get 400 gold. Both want to spend all their gold to earn experience! Alice would like to buy a Half Plate worth 750 gold. Bob has nothing else to spend his money on and would happily chip in with 350 of his 400 gold. Bob cares about Alice's health and therefore cares about spending his money on the Half Plate for Alice. Bob gets 350 experience points. He then spends 50 remaining gold on a pair of golden socks and recieves another 50 experience. Alice has spent all her money on the Half Plate and gets 400 experience (and a Half Plate).
+** Barter
+Players may sell items during town phase. Gold gained through trade like this must be tracked seperately and does not count as treasure. Experience is rewarded only for treasure. Players may spend this money, but they will not recieve experience points for it. It was not won in a dungeon!
+Conversely, if players are in the Travel or Dungeon phase and choose to trade some of their treasure (i.e. for healing potions at a traveling merchant) they lose their treasure but do not gain experience points for it. Experience points may only be gained in town, and treasure only in dungeons and the overworld!
+** Rogues
+Inevitably, one player will say "During my watch on the long rest, I sneak up onto Bobs backpack in the dark and take his treasure".
+That is, one players wants to steal another players treasure, possibly in a covert and stealthy manner, so he can earn more experience than the rest of his group.
+This can lead to dangerous tensions on the player level. A simple solution is to not allow PVP-type actions like this at all, or only if both players, the thief and the victim are on board and consenting. Simply ask "Bob, will you let Alic eroll sleight-of-hand to steal your stuff?". If Bob says no, Alice simply finds that Bobs pockets were empty etc. The universe simply block Alice from stealing Bobs stuff through every possible way. 
+In any case, the rewards for stealing are naught. Treasure that is gotten by stealing from party members can be added to the rogue's private inventory, but thereby ceases to be treasure - the rogue can not turn it into experience. It can however, be spend on buying things, if the rogue wishes. This effectively removes some experience from the parties pool.
+If this happens, resist the temptation to give other party members perpetual perception checks to detect the rogue's subterfuge. This can endlessly bog games down. Simply let it happen, move on and resolve things in the town phase: The party does not notice the rogue's stealing during the dungeon and traveling, but they do notice that alice suddenly appears with way more stuff bought, more jewelery, finer clothes and so on. This can be the situation where the party confronts the rogue.
+** I earned it myself
+Occasionally, players may agree that a single character earned a treasure for themselves. For instance, a fighter that wins an armwrestling duel with a bugbear may win a 50 gold treasure. In such cases, if everybody agrees, simply let the fighter have exclusively dibs on that particular treasure and keep track of it seperately from the party experience/treasure pool.
+
+
+
+* Encumbrance
+In games, Carrying capacity is a feature often bemoaned and even more frequently ignored. The attempt of many games to secure verisimilitude by the accurate, sometimes down to the pound, simulation of weight, encumbrance and storage space can lead to unnecessary and unacceptable amounts of bookkeeping. However, due to the exceptional focus on wilderness travel and survival, carrying capacity is an aspect of the game that cannot simply be hand-waved; it is essential in limiting the availability of key resources. The scarcity of food and water guides the players' decision on which path to take. A lack of light can force players to expediate their dungeon exploration. Because of this, we forego the accurate simulation in favor of game balance with the following, somewhat abstract rules.
+** Heroic Encumbrance
+The standard rules for encumbrance (in both variations) are dismissed and no longer apply.
+It is simply assumed that heroic adventurers can carry their normal equipment. A fighter can wear a platemail and carry a selection of weapons. A wizard, weak though he may be, can of course carry his spellbook, wear a robe and carry an assortment of scrolls or wondrous items. Do not track the weight of characters inventories. Be lenient with the amount of things people carry. Encumbrance should only be considered if it leads to the players having to make interesting choices, and most choices concerning inventory are not interesting. Of course, with the following exceptions.
+** Food, water and Light
+As detailed in the Food and Water section below, these resources are measured in units of rations and waterskins. We track light in unit of torches (or lanterns or other, similar items). Additionally, we also track the amount of so called inspiration items. These have a variable size measured in slots (equivalent to units of rations and torches).
+Players can carry their strength score (not modifier!) in units of either food or water, light or inspiration item slots. That is, if a player has 12 strength, he can carry 4 food rations, 6 waterskins and 2 torches - or 16 torches - or 4 rations, 4 waterskins and 4 torches etc.
+If a character carries more than their strength score but less than or exactly their strength score + half their sctrength score (rounded down), their speed is halved until they drop food, water or torches.
+If a character carries more than 1.5x their strength score, their speed is set to 0 and they fall prone after 1d4 rounds.
+A horse with saddlebags can carry 20 units. A horse with a wagon can carry 200 units, but the party's travel speed is limited to slow. Use these values as guidelines for toher forms of transportation.
+A bag of holding or a portable hole can essentially store unlimited food, water and torches. However, food spoils quickly in extradimensional containers. Each time a player takes a food or water item out of an extradimensional container, roll 1d20. On an 11 or higher, the food is edible. Otherwise, it is inedible and cannot be consumed anymore. If you wish to completely forego this mechanic, award your players an extradimensional ice box. Inspiration items can never be stored in extradimensional containers. Their slots must always be accounted for by strength score.
+** Treasure
+Players can carry most kinds of treasure without limitation. Gems, artisinal trinkets and jewlery is coveted among adventurers for exactly this reason.
+There are certain kinds of treasure that are obviously unwieldy and placed in the world by the DM with the express intent to challenge the players logistics skills. This applies to treasure such as heavy oaken desks with exquisite ornamentation, large paintings, statuary or beautiful stained glass windows. To deal with such treasure, invoke the Heroic Logistics rule. They cannot just be carried in someone's inventory.
+Coin is the most common form of treasure. The party can carry 250 coins per character - of any denomination. Any more and the Heroic Logistics rule must be invoked.
+** Heroic Logistics
+Heroic Logistics applies to the transportation of treasure, unwieldy magic items or similar things - it can never be used to circumvent the food, water and light carrying restrictions.
+If the party is in a situation where this rule is to be invoked, there is something they must transport but cannot carry by normal means.
+To transport said object or objects, do not begin to measure weight or argue inventory size. It is necessary and sufficient for the party to do _something_ to transport the object(s); they must come up with a plan to facilitate transportation. This plan must complicate their dealings in some way.
+In the case of, for instance, being faced with the transportation of a heavy statue, the players could 
+ - Use tensors floating disk
+ - Shrink the object
+ - Load the statue on a wagon and travel more slowly
+ - Circle up a band of henchmen or workers to carry the statue
+ - Use a bag of holding or portable hole
+ - Use masonry or similar proficiencies to take the statue apart and transport it piecemeal
+If any of such plans are put into action, the treasure can be thereby transported and capacity is not an issue. In each case, a complication is possible - for instance, the treasure, when transported on a wagon, is visible in case of random encounters and endangered.
+Large amounts of coins can be handled analogously, by, for instance, filling the coins into a chest and transporting this on a wagon or disk.
+If the heroic logistics rule is invoked, it triggers an epilogue: Players cannot simply fast travel baack to town after clearing a dungeon and looting the heavy treasure - we need to see them haul it home safely. The DM should be aware of this restriction and discuss with their players how much fast travel, or rather how little heavy treasure, they wish to see in the game - and adjust treasure rewards accordingly.
+** Pathological Cases
+
+* Inspiration
+The usual Inspiration rules (DM awards inspiration for good roleplay) are kept, though their vagueness, lack of player control and unenforcability should be supplemented with the following inspiration rules. These still use the inspiration mechanic to create low-tension slow paced roleplaying moments, but do so while leveraging the encumbrance and exploration system. In addition, they are fully in the players control.
+** Embarking on a Journey
+When the players leave town for the first time during the town phase to embark upon their journey to a dungeon, visions of treasure and glory fill the minds of our intrepid adventurers. The entire group recieves inspiration. This may be in connection to the players describing their dreams (what to spend the gold on), telling tales in the tavern about whom theiy are going to slay or showing the professionality and preparation of a grizzled veteran.
+** Inspiration items
+A player can grant inspiration to one player (including themselves) using an inspiration item. The item can be used to grant inspiration once per day, during a short or long rest. The item is consumed after use. The general idea of these items is to give a moment of respite, comfort or joy to the adventurers, while they are resting in a dark and damp place, bleeding and sweaty before a door, nailed shut, with evil besieging them beyond. In such moments the characters get out their barrel of fine wine, a lavish meal, their kenku poetry or prayer beads to grant them courage, alleviate their discomfort and banish their fears.
+Inspiration items can be bought in town. Their prices are listed below. Higher level characters require more impressive things to inspire them. Therefore, inspiration items have a max level at which they can be used. This level applies to the player the item is used on, the one who recieves the inspiration. If a level 5 Cleric has a wine barrel inspiration item with max level 3, he can use it to inspire the level 3 Barbarian in his party, but not himself.
+Inspiration items take up encumbrance and compete for slots with food, water and light. Inspiration items can take up more than one slot, as noted below. Inspiration items do not count as food rations or water unless otherwise specified - they do not normally obviate the need to consume a food ration for the purposes of hunger (or thirst).
+You may notice that halflings have recieved a somewhat special treatment. This is because we believe the inspiration of comrades through means of comfort is in the spirit of the halfling. They are also one of the few races without darkvision. Due to the goal of producing a darker, more challenging feel, the rules want to encourage players to choose races without darkvision.
+*** List of inspiration items
+Name | Max lvl | slots | cost | Special
+bottle of mead | 1st 3 | 40 silver |
+Pipeweed | 1st | 1 | 1 gold | Halflings only
+--------------------
+Barrel of Wine | 3rd | 4 | 30 gold |
+Tea Set | 3rd | 2 | 30 gold | Halflings only
+Elaborately carved board game | 3rd | 2 | 25 gold | Requires DC 8 Wisdom(Gaming Set) skill check to grant inspiration (not to win, but to let the other player win without noticing)
+Solemn hymn (sheet music) | 3rd | 1 | 67 gold | Requires DC 10 Charisma(Performance) check
+Fine honey crusted bacon | 3rd | 3 | 60 gold | Can serve as food ration for the day
+Magic Incense | 3rd | 2 | 80 gold | Only works when combined with another inspiration item (that another player uses)
+Talamoric Whiskey | 3rd | 2 | 90 gold
+Illusionist's pocket cinema | 3rd | 1 | 120 gold | Shows a different movie every time
+--------------------
+Tea, Biscuits and Bag of Shiremade Pipeweed | 5th | 2 | 200 gold | Halflings only
+Barrel of Cave Fisher blood | 5th | 4 | 280 gold |
+Dragon's Skull, with tale of how it was slain (lie) | 5th | 3 | 560 gold | Requires a DC 8 Cha(Deception) check.
+Dragon's Skull, with tale of how it was slain (trueth) | 5th | 3 | 560 gold | Requires having slain dragon
+Prayer Set (Candelabra, Candles and Incense) | 5th | 2 | 840 gold | Always inspires a cleric that uses it. Requires DC 12 Wisdom(Religion) check to inspire another, additional person. 
+Bottled Fairy | 5th | 1 | 1120 gold | Dances, entertains and makes merry.
+--------------------
+Fey Wild Red Wine | 7th | 5 | 825 gold |
+Dragonscale Tea mix and Pipeweed from the plane of fire | 7th | 2 | 900 gold | Halfling only. Gives fire resistance for 1 hour.
+Elysian music box (crank operated) | 7th | 3 | 2750 gold | Makes listeners cry (cathartic)
+Glabrezu Poetry | 7th | 2 | 3300 gold |
+Crystal Ball showing happy memories | 7th | 1 | Diamonds worth 50 gold |
+--------------------
+Beads of Astral Projection | 11th | 8 | 1 Rare Magic Item | Swallowed to transport entire group to pocket in astral plane, which is designed to their comfort and liking. Inspires the entire party.
+Pipeweed of Dreaming | 11th | 2 | 2 Uncommon Magic Items | Halflings only. Transports consciousness to happy place.
+--------------------
+Revelation of Divine Guidance | 20th | 0 | Diamonds worth 300 gold | Good characters only
+Miracle of nature's harmony | 20th | 0 | Diamonds worth 300 gold | Neutral characters only
+Epiphany of Power and Domination | 20th | 0 | Diamonds worth 300 gold | Evil characters only
+Blue Pipeweed | 20th | 1 | Diamonds worth 100 gold | Halflings only
+* Class Features
+Some class features simply do not work with the rules as presented here, or would benefit from clarification. These are listed in the following section.
+** Ranger
+*** Natural Explorer
+The ability to not get lost is removed. Instead, a ranger in his favorite terrain gets advantage on navigation/survival checks. Remember that this is in addition to his doubled proficiency bonus, if he is proficient in survival. Also, if a ranger's group does get lost in their favorite terrain, they immediately become aware of this.
+Rangers in their favorite terrain get advantage on foraging rolls. On a successful foragin roll, they produce food and water not just for themselves, but also for one additional character.
+With the rules as presented here, the idea of remaining alert during activities (foraging, navigating etc.) becomes irrelevant; players are assumed to always forage and navigate, so this feature would offer a non-choice. Instead, rangers in their favorite terrain simply get advantage on perception checks to detect random encounters.
+Rangers in their favorite terrain are indeed able to use stealth when traveling alone and at normal speed. In addition, they enable the group to stealth at normal speed, though with disadvantage.
+* Backgrounds
+Players can choose their backgrounds as normal, or create one of their own, as per the standard rules. Note, however, that backgrounds interact with the circles skill, in that you can only circle up NPCs from your background.
+Because the rules presented here have a strong focus on wilderness travel, some background abilities must be changed. These changes are as follows
+** Outlander
+Outlanders are strangers to civilization and generally do not live very social lives. If you have the outlander background, you are permanently at disadvantage on all circle rolls.
+*** Wanderer
+Having the outlander background and the wanderer feature does not allow a character to provide food and water for up to 5 people. Instead, outlanders get advantage on all foraging rolls during travel. In addition, when an outlander succeeds on a foraging roll, they provide food and water not just for themselves, but for one additional character.
+The outlanders excellent memory of geography and knowledge of maps gives them advantage on all navigation/survival checks to travel to hexes that they have already been to.
+
+* Rest and Recovery
+Resting is changed in order to provide a more challenging management of resources such as spell slots, hit points, hit dice and time. It also does some work to bring certain perhaps underused abilities to the fore. This is especially necessary for overworld travel, since a normal travel day in a dangerous hex will on average procur 2 encounters. In a game balanced around 6 to 8 encounters per day to keep things challenging, this can put a lot of stress on a DM and force them to make encounters unreasonably deadly. 
+Since these rules in general strive to provide a more deliberate control over the pacing of the game by considering it in different phases, it is only natural to also consider resting differently in each phase. Resting rules are therefore changed as follows:
+** During Town Phase
+Resting in town, the players enjoy all the comforts and benefits of civilisation. This provides the strongest bonuses of resting.
+Resting occurs normally. All hit points and half the hit dice are recovered during long rests. Short rests actas normal.
+In addition, upon embarking on their next journey, all players may mark inspiration.
+** During dungeon phase
+Dungeons provide shelter from the elements and can therefore facilitate more restful sleep. However, for careless adventurers they may quickly become permanent resting places...
+Short rests work as normal, with the implied danger of random encounters to interrupt.
+Long rests work as normal. Players recover their full hit points and regain half their hit dice.
+(FIXME: temporariliy changed, remove this if change is permanent) Long rests work as normal, except that they do not recover any hit points on their own. To recover hit points during a long rest, a player must spend his hit dice as in a short rest. Players still recover half their hit dice. Hit dice recovered in a long rest can be spent in that same long rest.
+It is understood however, that a long rest is very likely to be interrupted in a dungeon. The exact likelyhood is determined by the DM on a dungeon per dungeon basis. Players can and should take precautions to hide or secure their shelter.
+** During overworld travel phase (or while being lost)
+Sleeping in tents and on rough earth or in bitter cold provides small comfort. Resting during travel is therefore much less gainful. However, crafty adventurers can invest time into securing a permanent shelter. Resting during overworld travel is therefore split into three categories.
+*** Short Rest
+Short rests during overworld travel can be taken at any point in the day (restrictions apply, see below) and occur as normal, bestowing benefits as per the standard rules.
+Note, however, that some players may try to argue for taking a short rest immediately before or after a long rest. This is nonsense from both a fictional, as well as a game balance perspective and is never allowed. If this point is argued, i.e. a player wants to take a short rest at dawn after an hour of traveling, the characters may very well do so in the fiction, but no mechanical benefit is bestowed. Short rests during travel may only be taken after the first encounter of the day (be it combat or otherwise). If no encounters occur during the day, the party may take one short rest at any point.
+*** Long Rest
+Long rests provide fewer benefits than normal. Players do not recover hit points, unless they spend hit dice to do so. Players will recover half their hit dice as normal and these can be spend during the same long rest that they are acquired in. 
+Most importantly however, for any magic user that normally recovers all their spell slots during a long rest, only half their level in  spell slots (rounded up) is recovered. This is similar to the arcane recoverey feature of the wizard, except that it works even if arcane recovery or similar features have already been used that day.
+Likewise, Sorceror spell point recovery, Monk Ki points and Barbarian Rages are increased only by half the normal amount (round up).
+
+These restrictions can be overcome with a permanent encampment.
+
+*** Permanent Campsite
+Players can spend 16 hours (essentially 1 day) to erect a permanent campsite. This campsite remains on the map in the hex it was build or fortified or discovered and can be revisited by the players. If players rest in a permanent campsite they gain the benefits of a long rest as per the normal rules (or the town rules). That is, full benefit of healing and spell slot recovery. The erecting of such a site must be announced to the DM at Dawn. all travel progress for that day is lost.
+To build a campsite, players can use survival to find a suitable location. Use other appropriate skills to fortify or hide the campsite. This can make the campsite easier to defend or harder to spot for enemies (apply disadvantage to percpetion during night encounters), but it will not protect it from being discovered in the players absence.
+Permanent campsites can be discovered by other creatures and be destroyed or made uninhabitable. Do not employ excessive bookkeeping to simulate this. Rather, every time the players return to a permanent campsite with the intention of resting there, find the danger rating of the hex the campsite is in. Roll 1d6. If the result is equal to or lower than the danger rating, the campsite has been destroyed or is currently being destroyed, invaded or otherwise being made unpleasant. In either case, it is not usable for a permanent campsite rest unless the players rebuild it.
+Instead of building a campsite, the players can also discover already existing ones. Alternatively, they can elect to use a completed and cleared dungeon (such as a gnoll fortress or a wizards tower) as a campsite. These campsites may forego the 16 hour requirement, or they may be immune to destruction or invasion. These details are ultimately up to DM discretion and the particulars of the campsite.
+* Food and Water
+While a game of heroic fantasy may opt to ignore mundane trifles of nourishment and hydration, the rules presented here strive to produce a world of hardship, want and grit. Hence, all players must keep careful track of their food and water supplies. Failing to eat and drink incurs penalties, so that traveling through barren lands that are difficult to forage is discouraged. Alternatively, the players may choose to sacrifice combat effectiveness to use valuable spell slots to secure their sustenance by magical means. In any case, choices must be made.
+In case the players fail to eat and drink regularly, the following rules apply. These rules supplant the standard rules of the game.
+** Food
+Characters consume food in units called food rations. Every item of food in the players inventory, be it a bag of nuts, an iron ration or a pound of meat, comprises exactly one food ration. A food ration will feed a player for one day and is thereby consumed.
+*** Fasting
+If a character does not consume food for one day, he will gain a level of exhaustion on the next day. This exhaustion, however, is not cumulative. If a player goes without food for one day and already has one or more levels of exhaustion, he does not gain an additional level of exhaustion. If a character then consumes food the exhaustion does not instantly go away; instead they will lose the exhaustion the next day.
+This represents the difficulty of fasting while engaged in strenuous physical activity (which the characters always are). Nevertheless, going withoout food is not completely crippliing. Real starvation only sets in after a prolonged period of going without food.
+**** Starvation
+Players can go 3 + constitution modifier days without food until starvation sets in. It is not possible to stretch rations; we already assume the characters are doing everything they can to make their food last.
+On the day after this limit is reached, the starving character must make a constitution saving throw at DC 15. On a fail, they gain a level of exhaustion. This exhaustion is cumulative with every other exhaustion, in particular the exhaustion from the fasting rule above (apply the fasting exhaustion first, then the starvation). Until the character eats, repeat this check each day.
+This timer is reset whenever a character consumes a food ration. In adition all levels of exhaustion from starvation are removed immediately upon food consumption - but not the level of exhaustion from fasting, which will go away the next day.
+It is legitimate for players to game these rules by eating only on the last day of their starvation limit and thereby avoid starvation penalties. This represents stretching of food supplies. Note however, that this does not avoid the fasting rule.
+** Water
+We measure water in gallons. A waterskin carries one gallon of water.
+A character requires 1 gallon of water per day, 2 gallons in hot climates.
+If they drink half the required amount, they must pass a DC 15 constitution save or suffer a level of exhaustion.
+If they drink less than half the required amount for a day, they immediately suffer a level of exhaustion.
+This exhaustion goes away as soon as they drink the required amount.
+Exhaustion from dehydration interacts with fasting exhaustion in the usual way: If a character does not eat or drink for one day, then the next day they will have exhaustion level one.
+A character that does not drink for 3 + Constitution modifier days gains an additional level of exhaustion on the last day of this limit, and one level of exhaustion for every day afterward until they drink again.
+* Spells
+Most spells existing in the game are perfectly suited for a campaign involving lots of wilderness travel and dungeon exploration. Indeed, certain spells really only unfold their full potential in such a campaign. In rare cases, small changes were made to spells that would otherwise circumvent large parts of the game as presented here. In other cases, such shortcuts are expressly permitted and desired - overworld travel should seem a daunting task to the players at lower levels, so that circumventing travel entirely at higher levels should feel all the more powerful. 
+This section exists to list the changes to some spells, clarify the use of others and lastly to merely highlight some perhaps otherwise rarely used spells.
+** Spell Changes
+*** Revivify, Resurrection, Raise Dead and True Resurection
+The ease at which higher level parties resurect characters can be a great boon for highly story focused campaigns, where one chanced critical should not stop the players from exploring their beloved characters. It can also completely suck the tension out of the game. Since the rules as presented here strive for a high-tension kind of game, the resurection spells must be addressed.
+However, perhaps surprisingly, it is not necessary to directly nerf these spells to decrease or complicate their impact on the game. Instead, we leverage the gold as xp rules thus:
+All resurrection spells require diamonds as material components. The town does not sell diamonds. Nor does any other traveling vendor. The distribution of diamonds is done only through treasure, which the DM dispenses. Furthermore, if diamond treasure is found, it must be kept as diamonds in order to be used for the resurrection spells; it cannot be sold or traded and thereby gold from diamonds kept as material components does not count towards experience rewards. Alternatively, the diamonds can be sold by the players to turn them into experience as any other treasure (diamonds are highly coveted after all, since nobody sells them).
+In this way, the players can make a choice between advancing their characters faster, or securing the lives of the characters they already have.
+Also consider that through this rule, the deadlyness of the game can be freely adjusted. Some people really don't like dieing and that's ok. It is in the spirit of these rules - and highly encouraged - to give out diamonds very rarely and make them a scarce resource. More importantly, however, the DM should talk to their players to determine how they feel about their level 5+ characters dieing and reward diamonds accordingly. In any case though, the rules clearly dictate that neither player characters nor any other NPC is able to purchase diamonds from NPCs.
+A note concerning verisimilitude: Considering the fantasy world as an internally consistent place, it makes a lot of sense that diamonds are rare to the point of extinction. Level 5 Clerics are not uncommon and with the revivify spell being readily available every noble lord or rich merchant would constantly have his personal, diamond equipped resurrection cleric on hand. Such practices may have been common in the past, but by now all the diamonds have been used up in the resurrection excesses of days gone by.
+** Clarifications
+*** Tensor's Floating Disk
+Yes! This spell is finally useful, as it can be used to transport heavy treasure (such as chests or statues) across the landscape, as per the Heroic Logistics rules. During travel, it is assumed that the magic user casts this spell over and over as a ritual. Do not impose a speed restriction because of this; a party using the famous disk is still permitted to travel fast. We simply assume that the magic user in question is a master of the disk and has devoted many an hour of study to its powerful secrets, thereby allowing him to perform the ritual swiftly and while on the move.
+However, using the disk to transport treasure from a dungeon does trigger the epilogue rule (see the Campaign Structure section for more information).
+*** Purify Food and Drink
+When traversing the wilderness, some of the failed foraging tests are not due to characters not finding anything. Often times, wild berries are found, but they turn out to be inedible; small ponds may be brackish or game diseased. In such cases this spell can save the spoiled source of food or water.
+During travel, this spell may be used (as a ritual or not) once per day to give one player advantage on the foraging roll. If the advantage turned out to be helpful, narrate the casting character to be despoiling a bad food or water source.
+Otherwise this spell works as written. It should be noted here that food found on hostiles or in dungeon is often spoiled or diseased.
+*** Locate Animals or Plants
+This spell works as written. In particular, while traveling, it may be used to secure food for one day and only for the casting player (by either locating edible plants or easy prey), if at all possible in the surroundings (i.e. not in a desert). It can of course be used to locate more food, but this takes too much time out of the traveling day and thereby cancels travel mode.
+If the landmark that the party is traveling to happens to be an animal or a plant (such as a giant tree or perhaps a stranded whale that mysteriously survives), then this spell may be used while traveling to automatically succeed on navigation rolls.
+*** Create or Destroy Water
+This spell is only mentioned here to clarify that it indeed works as written. If a magic user casts create water, it will completely nullify the need to make foraging tests to find water. The 10 gallons created at level 1 can easily quench the hydration needs of any reasonably sized party for one day. However, foraging tests to find food must still be made as normal; food is still consumed.
+*** Goodberry
+The question may arise, wether this spell allows the complete circumvention of the foraging rules, since it may obviate the need for food and water. This is not the case, though it does provide a substantial benefit. The spell reads:
+"(...) the berry provides enough nourishment to sustain a creature for one day."
+Here, 'Nourishment' is to be read as caloric intake. As such, goodberries can completely replace food rations, but they do not negate the need for water. 
+*** Enhance Ability
+If players wish to use enhance ability to improve their foraging or navigation rolls during travel, let them. It costs a spell slot and a memorization for the whole day, which should be rewarded accordingly.
+*** Pass without Trace
+This spell works as written for all intents and purposes. The question is how to abjudicate it when it is used during overworld travel. A player would naturally want to get the stealth bonus for random encounters. The spell's duration is only 1 hour and it is not a ritual,so it cannot be active all throughout the day. Still, for the spell to be useful, it would have to be cast before a random encounter - but when such an encounter occurs is not known in advance.
+The simplest solution is to have the player announce his intent to cast this spell one or more times at dawn of a travel day. The player picks during which part of the day (dawn, afternoon, evening or dusk; not midnight or predawn, since under normal circumstances no traveling happens at night) the spell (or spells) is cast. Then it simply comes down to chance - if a random event occurs in the selected part of the day, the party recieves the Pass without Trace bonus for that random encounter - and if not, then not.
+The different parts of the day are, of course, longer than 1 hour, but we give some leeway here to make the spell useful and interesting to use during travel, without making it a pain to manage or abjudicate.
+*** Create Food and Water
+This spell works as written and obviates the need for a foraging roll for the entire party. However, this spell is not a ritual and must be both memorized and cast with a spell slot. If your players choose to sacrifice combat efficiency in order to eat and drink, congratulations! You have pushed them hard enough.
+*** Plant Growth
+When this spell is cast in the 8 hours 'enriching the land' variant, all fictional consequences apply as normal (i.e. thankful peasants, happy forest dwellers). However, in addition, when the druids party takes a day off of travel during overworld travesal in a hex in order to cast this spell, the hexes resource rating may be improved permanently, making foraging much easier. After the druid spends 8 hours in the hex casting this spell, roll 1d6. If the result is _higher_ or equal to the resource rating of the hex, the resource rating is increased by 1 for one year.
+(FIXME: wrong)Note that in this case the die result must be higher or equal, while for a foraging roll it must be lower or equal: It is much easier to enrich barren lands, than to push the envelope in already fruitful areas.
+*** Find the Path
+This spell works as written. In mechanical terms, this means that when players use this spell to find the path to a particular hex or a site within a particular hex, all navigation checks to travel to that hex automatically succeed. Players must travel in the straightest possible path. If this path leads them through unexplored and unmarked hexes, they become lost, except for the purposes of following the path to the hex that was targeted by find the path. When they reach their destionation, they naturally cease to be lost.
+Note that the spell does not require players to have previously visited the desired location - they only need an object from that location as a component. Such objects can of course be easily acquired if the location is visited. However, the DM is advised to be generous to crafty players who try to socialize their way into possession of a rock from the dragons lair or a piece of bark from the petrified forest. This is a sixth level spell after all, and using it should feel 'very cool'!
+To find the path, you do not stray from the path. While players are traveling using find the path, no discovery rolls are made. All other rolls during travel mode (random encounters, foraging etc.) are made normally.
+* Travel
+To Travel on the overworld map, choose the adjacent Hex you wish to travel to. If its landmark is known to you, you may try to navigate to this hex. If not, see the aimless wandering section below.
+** Navigating to a landmark
+Once you start navigating to a landmark, you are considered traveling. During travel you are always occupiying some hex on the world map, which will determine your surroundings and influence your traveling. Travel can start from anywhere, as long as you are not considered lost. Likewise, you can start to travel at any time. Traveling happens in travel days. The events of each day are determined through the following process, which must be followed step by step. 
+** Traveling Day
+*** Players announce their speed of Travel
+The group may choose to travel slowly, normally or fast. This will increase or decrease the time they have to spend in their current hex, as well as incuring other benefits and penalties, which are detailed below.
+The impact of speed on the actual travel time is resolved during the last phase of the traveling day and with the progress roll. Fast speed gives a +1 bonus, slow a -1 malus and normal speed incurs no change on this roll.
+**** Slow Travel
+During slow travel all survival checks to forage for food and water are made normally, with neither advantage nor disadvantage. Navigation checks are made with advantage. All  perception checks to avoid or detect hostiles are made with advantage. Monsters have disadvantage when trying to detect the party. It is possible to move stealthily.
+**** Normal Travel
+When traveling at normal speed all survival checks for foraging are made at disadvantage.Navigation checks are done normally. Perception checks remain unchanged. It is impossible to stealth.
+**** Fast Travel
+When the group travels fast, certain sacrifices must be made. It becomes impossible to forage for food and water. Navigation checks are made at disadvantage. The party suffers disadvantage on all stealth and perception checks to avoid or detect encounters, while monsters enjoy advantage on perception checks to detect the party. It is impossible to stealth.
+*** Changing Pace
+It is possible for the players to change pace during the day. If for instance, after traveling at normal speed they survive a hard encounter and would now rather move stealthily, they may change their pace for the rest of the day. This will give them the benefits of stealth and perception, however, foraging and navigation checks are made for the fastest speed traveled on that day. Progress is made for the slowest. So it never makes sense to speed up during the day and the only benefit of slowing down during the day is increased stealth and the possibility of avoiding encounters. Plan your travels early!
+*** Roll for encounters.
+The traveling day always starts at dawn. Upon dawn, the DM rolls 6d6 in sequence. Each die represents the state of affairs of a given part of the day. These parts are, in chronological order:
+ - Dawn
+ - Afternoon
+ - Evening
+ - Dusk
+ - Midnight
+ - Predawn
+The hex that the group is currently traveling in always has a certain danger rating between 1 and 5.
+If the die that corresponds to a given part of the day comes up with a value equal to or lower than this danger rating, a random encounter (see the Random Encounter section) occurs in that part of the day.
+**** Time and Resting.
+An 8 hour rest will take up 2 of the 6 parts of the day. These must be Midnight and Predawn. This resting period can be interrupted by random encounters, should the dice dictate as such. Note however, that an 8 hour rest will still bestow its benefits (i.e. Hit Die spending, spell recovery) if it is interrupted for no more than 1 hour.
+For ease of flow and convenience, traveling days always start at dawn. This assumes the normal situation of players resting through the night and traveling in the morning. If the players wish to start traveling before they rest (e.g. after exiting a dungeon in the afternoon), then they can do so. In this case both the rest of the current day and the night are without incident. The characters are considered traveling but no mechanical progress on the overworld map is made. Perhaps it took longer to pack up the camp, or it was raining - whatever the case, we abstract from such details in order to keep the flow of the game streamlined. At the beginning of the next day, travel starts as normal.
+*** Roll for discovery
+The current hex has a discovery rating between 1 and 5. As with random encounters, a die is rolled to determine if the players come upon a wondrous or interesting place or situation. In this case however, it is only 1d6. If the die comes up lower or equal to the discovery rating, a discovery occurs that day and the current hex's discovery rating is lowered by 1. The DM chooses during which part of the day the discovery occurs. The DM may roll in secret or in the open at his discretion. A random discovery does not in and of itself impede travel.
+*** Resolve Encounters
+The DM gives a general outline of travel for this day as they see fit. When the day reaches a time that was previously determined to entail a random encounter, the DM narrates the state of affairs of the party as they are about to come upon said encounter. An encounter should seldom start in the middle of combat.
+Encounters do not have to contain monsters or combat, but they do need to be challenging. If the encounter does contain monsters or hostile creatures, apply benefits and penalties to stealth and perception checks of the party in accordance with their speed of travel.
+Monsters may also set ambushes or sneak up on the party. Make stealth checks as appropriate. If both the party as well as the hostiles fail their perception checks, they pass each other in oblivion. It is recommended that in this case the DM make ominous and portentous descriptions that ultimately frustrate the players anticipation of danger.
+If a discovery was made, the DM also narrates the players coming upon it at a time determined by the DM. To increase tension and improve pacing it is recommended that the discovery is found only after, and not before, at least one random encounter of the day was resolved.
+*** Making Camp
+Before any encounters in the Midnight and Predawn period of the day are resolved, the party announces their plans for making camp. These can include plans for fortification, choosing an easily defensible position or trying to remain especially hidden during camping.
+During travel, the party makes camp after dusk. Thereby, their long rest always occurs in the period of midnight and predawn. This restriction is enforced for flow and simplicity of overworld travel, as well as verisimilitude: Noone, even darkvision enhanced creatures, would choose to do serious wilderness trekking during the night.
+If the party wishes to camp earlier during the day, be it to reap the benefits of an urgent long rest or just to explore the scenery or wait around, they may do so, though it will put them out of travel mode. In particular, this means that random encounters will still procur, food is still consumed, but neither foraging nor any actual traveling can be done for the day. All travel progress for the day is thereby lost and the End of Day phase is not reached, but they can resume traveling the next day as normal. Camping early does not incur the lost condition.
+If on the other hand, the party wishes to march through the night, simply resolve random encounters and discoveries as normal. No long rest is made, but the End of Day phase is still entered, now with a +1 bonus to the progress roll. However, the party gains one level of exhaustion due to the danger and difficulty of traveling by night.
+*** End of Day
+At the end of the traveling day, after all the encounters and discoveries are resolved, we check to see for food, navigation and traveling progress. Make the rolls as detailed below and apply the consequences.
+The DM narrates, perhaps rather briefly, the corresponding events of the day; i.e. "cutting your way through the underbrush you suddenly came upon a wild boar and her piglets. Quickly beheading them, you have secured a mighty feast for the night." or "You found a small brook that you use to refill your waterskin but after some examination you notice that the water is tainted.".
+These events can be narrated retrospectively: This is the off-camera day to day work of traveling adventurers, and we only get to see it in a montage sequence between traveling days.
+(FIXME: this is a shit paragraph)This phase, along with deciding on travel speed and rolling for random encounters, contains all of the bookkeeping for overworld travel. During continuous travel, each days adventures are therefore bookended by these phases. This is by design, to hopefully create varied pacing and a convenient table flow (i.e. these phases are good moments to take bathroom breaks etc.). 
+**** Consume resources
+Every adventurer must mark off 1 food ration and at least 1 full waterskin. Failing either of this incurs levels of exhaustion as per the Food and Water rules. Additional travelers (henchmen, prisoners etc.) consume additional resources.
+Horses also consume a food ration - traveling horses are taxed and cannot live off of grass alone - but do not need their own waterskin if a water source was found that day.
+**** Foraging
+Speed permitting, every adventurer can attempt to forage for food and water during the day. Every hex has a foraging difficulty between 5 and 20. This provides the DC for a survival skill check.
+If the survival check is successful, that player earns food worth 1 ration and comes upon some source of water, large enough to refill his waterskins.
+This check is done individually - if narration reveals one player to have found a water source, while another has not, the successful player may lead the other player to said water source, but the party thereby leaves travel mode and forfeits all progress for the day. It is assumed that characters occasionally spread out during the day to forage and additional coordination simply takes up too much time.
+Be sure to apply penalties from speed of travel. Other circumstantial modifications may also be made (i.e. if the landmark the players reached is a freshwater lake, water is automatically refilled).
+**** Navigation
+Navigation is used to lead the party from one landmark or point of interest to the next. This is done in a variety of ways, including the consultation of maps or the firmament, climbing on boulders to survey the land or by examining the moss on trees to determine the north. In any case, it must be understood that, in the wilderness, it is extremely easy to get lost if one does not stick to easily identifiable landmarks - this is the job of the navigator.
+Every hex has a navigation difficulty between 5 and 30. The party must choose a navigator. The navigator rolls survival against the navigation difficulty of the current hex. On a success, travel continues as normal. If the roll is failed, the party becomes lost the next day.
+The DM may choose to make the navigation roll in the navigators stead and in secret. In this case, travel on the next day resumes as normal, the navigator does not know that he is leading the party astray. Only during afternoon or evening travel does he eventually notice that the path is not what it should be and that the party is lost.
+In any case, if the navigation roll is failed, travel mode stops and the party becomes lost.
+A failed navigation roll supercedes a successful progress roll - yes you covered a lot of ground, but unfortunately in the wrong direction.
+A character may recieve help on a navigation roll, but only from another character who is also proficient in the survival skill. Players may attempt to navigate without being proficient in survival (at their own peril).
+As with the rules for being lost, if the party travels along a road, river, mountain range or otherwise continuous and remarkable terrain feature, they can automatically succeed on navigation checks for the purposes of following that feature.
+** * Progress
+Wilderness travel is subject to many random factors that impede or benefit progress. Predictions about travel time are never accurate or certain, bad weather, a broken wagon axle or mere exhaustion or lazyness can drastically change the progress a party makes. Hence we abstract away absolute distances or travel times with a progress roll. If this roll is successful, the party moves on to the next hex - and if not, then not!
+At the very end of the traveling day, roll 1d6 and apply modifiers from traveling speed or night marching. If the result is higher than the current hex's terrain difficulty (usually 3), the party immediatly is considered to inhabit the hex with the landmark they wished to travel to. Then, during afternoon or evening of the next day, the party reaches the targeted landmark.
+The Terrain difficulty is not a function of the hex directly, but rather directly related to the hex's biome. Consult the World-Map section for more information.
+This roll should be made by the DM. Note that the DM need only roll this if the Navigation check was successful.
+On success, the party may seamlessly choose to travel on to the next landmark. In that case travel is continued normally.
+**** Horses and Roads
+If the party is traveling along a road, they automatically succeed on navigation rolls. If they are traveling across roads and on horses, they also automatically succeed at progress rolls.
+However, horses offer precious little speed increase in the wilderness - the treacherous terrain, narrow passages and root littered forest floors require riders to excercise care, so as to not damage their horse. As such, traveling with horses while not being on a road gives no benefit to the progress role. The purpose of horses in the wilderness is either to serve as cavalry enabling war horses, or to transport additional rations or treasure as a pack animal.
+** Being lost
+The party can become lost in one of three ways
+  1. By failing a navigation roll during travel
+  2. By failing a navigation roll after fleeing a battle.
+  3. By choosing to bravely explore the land and thereby wander aimlessly on purpose.
+After any of these situations occur, the entire party is considered to be in the state of being lost and must take action to regain their bearings and become "unlost".
+*** Becoming lost
+Upon becoming lost, the players are moved from their original hex to another one. This happens regardless of progress rolls and in their stead. Their new location is unknown to them and determined in secret by the DM. 
+The mode of determining their new hex depends on the way they got lost. If The party got lost through failed navigation during travel or by wandering aimlessly, their direction is not completely random, since both of these actions have a target hex. So in this case, the DM identifies the origin hex and the target hex, as well as two hexes adjacent to both. The DM rolls 1d4 in secret to determine the new hex that the party will inhabit.
+If the party got lost due to fleeing from a fight, their orientation may have been thwarted much more drastically and the direction they took will be determined in a more chaotic manner. In this case the DM identifies the origin hex, as well as the 6 surrounding hexes. The DM rolls 1d8 in secret to determine the new inhabited hex. On a 1 or an 8, the players remain in their origin hex (but they enter the lost state). 
+Fleeing has much more variance when it comes to where you might end up, but it is also more likely that the party ran in circles and remains in their origin.
+Note that in both methods it is indeed possible to be moved from the origin hex to the origin hex.
+*** The State of being Lost
+While the party is lost, they cannot take the travel action, since travel is only possible between premeditated routes that lead from one landmark to another. 
+For each day of being lost in the wilderness, the same procedure as described in the "Traveling Day" section above is followed, with the following exceptions.
+Instead of taking the travel action, the party can only take the wander aimlessly action. Since they are not aware of their origin hex, they also cannot specify a target hex that is adjacent. Instead, the party can specify one of 6 cardinal directions (north, northeast, southeast, south, southwest and northwest). As per the normal rules for wandering aimlessly, the DM is aware of the players secret real inhabited hex and determines the traveled-to hex randomly.
+In order to progress from one hex to another it is not necessary to succeed at a navigation roll - the party doesn't know where they are anyway. However, a player can still make a navigation roll at the end of the traveling day. This uses the hexes navigation difficulty. On a success, a local landmark is discovered, if it was not already known. If the players manage to become unlost without traveling through another hex in which no landmark is known, they may mark this new landmark in its corresponding hex on the map. That hex is now considered known and explored and can be traveled to. If the navigation roll succeeds in a hex that had a previously known landmark that was marked on the map, they players become unlost (see below).
+These dynamics should be intuitive: While being lost in the woods the party finds interesting landmarks, but the location of these new findings remains puzzling unless they can be clearly connected to what is already known.
+The players can feel free to mark landmarks they find while being lost on the map based on pure speculation of their whereabouts. This can indeed make becoming unlost easier. However, such speculative markings do not interact with the rules as presented here - they do not produce hexes that can be traveled to.
+Progress rolls are made as normal, though the DM should take extra care to indicate to the players the ease or difficulty of progress, since this can allow the players to infer their location. The same applies to survival rolls for foraging. In both cases the DM announces clearly and unambiguously the difficulty for the skill checks and narrates the corresponding state of affairs in the fiction of play. Overworld travel is only interesting if the players get to make informed choices - and this is one way to inform them even when they are lost.
+While being lost, discovery rolls are made at advantage (the DM rolls 2d6 instead of one). The first discovery made in an unexplored hex is always the local landmark, if it was not previously known. Being lost is a great way to find interesting things!
+*** Wandering Aimlessly
+Wandering aimlessly is a variant of taking the travel action. It represents an uncertain and exploratory mode of travel that foregoes the logistical planning of traveling between landmarks. It therefore applies the rules for normal traveling and the traveling day, with the modifications of being lost as above.
+To wander aimlessly, If the players are currently lost, they can choose a cardinal direction (one of six) to travel to. The DM knows the secret currently inhabited hex and can thereby determine the target hex for wandering aimlessly.
+In case the party is not lost, they can still choose to wander aimlessly into a direction. This can be done to explore the land or to reach a destionation to which no confident path is known. In any case, this incurs the lost condition, but a target hex is thereby determined.
+The DM then identifies the origin hex, the target hex and two hexes that are adjacent to both. As described above, the DM rolls 1d4 to choose the hex the players get moved to on a successful progress roll.
+*** Becoming unlost
+If the players inhabit a hex that has a known and marked landmark and they succeed on the navigation check at the end of the day, then they immediatly recognize said landmark and have found their whereabouts again. The DM reveals their inhabited hex on the map. Congratulations!
+If the hex they inhabited immediately prior to the current hex had a landmark that the players just discovered, that landmark is also marked on the map and its hex is know considered known and explored. Apply this marking of adjacent landmarks recursively.
+While being lost and for the purposes of becoming unlost, the order of navigation and progress rolls should be considered in reverse: If the players are currently lost and in an unexplored hex, while succeeding on both the progress roll and navigation roll on their way to an already explored hex - then this successful navigation roll does not reveal a new landmark in the unexplored hex they just left. Instead the party immediately becomes unlost by moving to the new hex and using the successful navigation check to recognize the known landmark therein.
+If the party comes upon a well known and continuous terrain feature, such as a mountainrange, river, road or long faultline, then they can automatically succeed on navigation rolls for the purposes of following this feature. The party can travel to hexes through which this terrain feature leads normally by targeting them; no random determination of the hex they move to is made. However, they still retain the lost condition unless they succeed on a navigation check to identify a known and marked landmark.
+* notes
+
+There are also a ton of great resources online. One of my favorites is Sean McGovern (http://thecampaign20xx.blogspot.com/) who seems to have run every major hardcover campaign and broken down everything for interested DM's so you can pick and choose what elements to run/change. DMGuild also has guides for sale; some better than other.
+out of the abyss
+
+
+possibly only enable long rest upon successful progress roll
+
+only give back hit dice and allow spending on long rest, no full healing
+
+
+alternate resting: permanent camp site must be set up/ long rest only works in a comfortable environment/ permanent camp site set up is 8 hours
+
+
+kobold fight club
+
+
+edit travel rules to allow party to change pace
+
+nightmare underneath for town and stronghold rules
