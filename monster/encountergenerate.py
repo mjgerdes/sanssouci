@@ -10,7 +10,16 @@ from copy import deepcopy
 
 
 ENCOUNTERGENERATEHELP = """
+Encounter Generator Command syntax
+After setup, the generator enters a REPL where you can enter the following
 
+<newline> - (i.e. no input) Generate another encounter randomly, observing the current filter and xp threshold parameters
+clear - Clear the current filter and generate another encounter
+pick NAME1:N1[,NAME2:N2...] - Enter a new filter, generating only encounters that include the specified number (N) of monsters named NAME
+
+Examples:
+pick kobold:1
+pick priest:1,cultist:5
 """
 
 

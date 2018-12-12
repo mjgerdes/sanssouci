@@ -26,7 +26,6 @@ Commands
 
 Options
   --help - Print this help text
-
 """
 HELPTEXT += ENCOUNTERGENERATEHELP
 
