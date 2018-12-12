@@ -1,10 +1,110 @@
+#!/bin/python
 # encountergenerate.py
 #
 # This is a library used by monsters.py
 
-from monsters import *
+from collections import Counter
+import random
+from math import *
 from copy import deepcopy
 
+
+ENCOUNTERGENERATEHELP = """
+
+"""
+
+
+
+
+
+def mkShortStats(d):
+    w = " . "
+    w += str(d["hit_points"]) + " HP " + str(d["armor_class"]) + " AC "
+    acs = d.get("actions", {})
+    for d in acs:
+        w += " $ " + d["name"]
+        if "attack_bonus" in d.keys():
+            w += " +" + str(d["attack_bonus"])
+
+        if "damage_dice" in d.keys():
+            w += " " + d["damage_dice"]
+
+        if "damage_bonus" in d.keys():
+            w += " +" + str(d["damage_bonus"])
+
+    return w
+
+
+def shortName(name):
+    ws = name.split(" ")
+    short = ""
+    for w in ws:
+        if w:
+            short += w[0]
+
+    return short
+
+
+def modi(x):
+    return floor((x - 10) / 2)
+
+
+def mkInit(d, n = 1):
+    w = ""
+    if n > 1:
+        countString = str(n) + " "
+    else:
+        countString = ""
+
+
+    w += "*** " + countString + d.get("name", "N/A") + " init + " + str(modi(d["dexterity"])) + "\n"
+
+    for i in range(1, n+1):
+        w += shortName(d.get("name", "N/A")) + str(i) + " " + str(d["hit_points"]) + " HP " + str(d["armor_class"]) + " AC\n"
+
+    acs = mkShortStats(d).split("$")
+    for a in acs[1:]:
+        w += a[1:] + "\n"
+
+    return w + "---\n" 
+    
+
+
+
+
+def findByKey(ds, key, value, f = lambda x: x):
+    for d in ds:
+        if f(d.get(key, "")) == value:
+            return d
+
+    return {}
+
+
+def hackFloat(w):
+    if type(w) == type(1):
+        return float(w)
+
+    if type(w) == type(1.1):
+        return w
+    w2 = w.split("/")
+    if len(w2) == 2:
+        a = w2[0]
+        b = w2[1]
+        return float(a)/ float(b)
+    else:
+        return float(w2[0])
+
+
+def countDuplicates(xs, key=None):
+    if key:
+        c = Counter([x.get(key, "") for x in xs])
+        return [(findByKey(xs, key, value), count) for (value, count) in c.items()] 
+
+    c = Counter(xs)
+    return c.items()
+
+
+    
 ### generator stuff
 
 def xpPerCR(cr):
@@ -161,6 +261,7 @@ def generateOne(candidates, difficulty, xpThresholds, origEncounter=[]):
         return []
 
     encounter = deepcopy(origEncounter)
+# FIXME: what to do for xpthreshold 4??
     (lbound, ubound) = (xpThresholds[difficulty],xpThresholds[difficulty+1])
     ok = False
     origXP =encounterXP(origEncounter) * groupMultiplier(len(origEncounter))
@@ -241,5 +342,5 @@ def generator(ds):
         else:
             filt = [""]
                 
-                    
             
+
