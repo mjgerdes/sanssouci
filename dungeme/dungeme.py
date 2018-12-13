@@ -350,33 +350,65 @@ class State(object):
         print(self.currentRoom().get("description", "No Description."))
 
 
-commands = {
-    "q" : lambda s, ws: s.quit(),
-    "create" : lambda s, ws: s.create(ws[0]),
-    "l" : lambda s, ws: s.look(),
-    "move" : lambda s, ws: s.move(ws[0]),
-    "connect" : lambda s, ws: s.connect(ws),
-    "disconnect" : lambda s, ws: s.disconnect(ws),
-    "free" : lambda s, ws: s.free(ws),
-    "delete" : lambda s, ws: s.deleteRoom(ws),
-    "a" : lambda s, ws: s.makeNote(ws),
-    "note" : lambda s, ws: s.makeNote(ws),
-    "r" : lambda s, ws: s.readNotes(ws),
-    "dnote" : lambda s, ws: s.deleteNote(ws),
-    "d" : lambda s, ws: s.showDescription(),
-    "sd" : lambda s, ws: s.setDescription(ws)
+commands_full = {
+    "help" : (["Print this help"], lambda s, ws: print(mkHelp())),
+    "q" : (["Exit dungeme saving all changes."], lambda s, ws: s.quit()),
+    "create" : (["ROOMNAME", "Create a new room with name ROOMNAME."], lambda s, ws: s.create(ws[0])),
+    "l" : (["Look. Give a short description of the current room."],lambda s, ws: s.look()),
+    "move" : (["ROOMID", "Move to another room by number."], lambda s, ws: s.move(ws[0])),
+    "connect" : (["ROOMID1", "ROOMID2","PATH","Connects two rooms by a path. Will create a path from room with ROOMID1 to room with ROOMID2. Path can be the usual n,e,s,w,up,down,ne,se,sw,nw etc."], lambda s, ws: s.connect(ws)),
+    "disconnect" : (["ROOMID1","ROOMID2","Remove paths between rooms. Will remove all paths going from room with ROOMID1 to room with ROOMID2."], lambda s, ws: s.disconnect(ws)),
+    "free" : (["[ROOMID[","Removes all paths going out from a room. If no argument is specified, frees the curren room from paths, otherwise will free room with ROOMID."], lambda s, ws: s.free(ws)),
+    "delete" : (["[ROOMID]","Completely erases a room. This removes all the rooms paths, going in and out, as well as all descriptions and other contents. Will delete the current room if no argument is specified, room with ROOMID otherwise."], lambda s, ws: s.deleteRoom(ws)),
+    "a" : (["[WORDS]","Adds a note to the current room. If arguments are supplied, they are added as a one liner note, otherwise, with no arguments, will enter a multi-line note input mode. Finish the note with two newlines."], lambda s, ws: s.makeNote(ws)),
+    "note" : (["[WORDS]", "Same as 'a'."], lambda s, ws: s.makeNote(ws)),
+    "r" : (["[ROOMID]", "Read notes for a room. Specify by ROOMID argument, or no argument for current room."], lambda s, ws: s.readNotes(ws)),
+    "dnote" : (["ROOMID", "NOTEID", "Delete a note from a room. First argument specifies the room, the second argument specifies the number of the note in that room. You can see the notenumber/id by using 'r'. You must specify both arguments explicitly."], lambda s, ws: s.deleteNote(ws)),
+    "d" : (["Show long description of current room."], lambda s, ws: s.showDescription()),
+    "sd" : (["[WORDS]", "Set the description for the current room. If arguments are specified, they are used as a one liner description. Otherwise, a multi line edit mode is entered. Finish the description with two newlines."], lambda s, ws: s.setDescription(ws))
     }
+
+# we don't want to use the documentation internally
+commands = {key : value[1] for (key, value) in commands_full.items()}
 
 for d in directions:
     commands[d] = lambda s, ws, x=d: s.follow(x)
     commands["d" + d] = lambda s, ws, y=d: s.dig(y)
 
-    
+commands_info = {key : value[0] for (key, value) in commands_full.items()}
+dirstring = ", ".join(directions)
+commands_info[dirstring] = ["Standard movement commands. Will move in that direction if a path exists from current room."]
+digstring = ", ".join(["d" + w for w in directions])
+commands_info[digstring] = ["Dig in a direction. Exists for all standard movement directions and will 'dig' a path into that direction from the current room."]
+
+def mkHelp():
+    out = ""
+    for (command, args) in commands_info.items():
+        out += "  " + command
+        n = len(args)
+        if n != 1: # has args and not just description
+            for i in range(n-1):
+                out += " " + args[i]
+                
+        #in any case, append description
+        out += " - " + args[-1] + "\n"
+        
+    return out
+        
+
+def mkProgramHelp():
+    out = "dungeme.py - Dungeon control system\nUsage: dungeme.py [OPTIONS] DUNGEONFILE\n\nOptions\n --help - Print this help.\n\nIf a dungeonfile is specified, dungeme will enter into editor mode with the following commands:\n" + mkHelp()
+    return out
 
 def main(argv):
+    if (len(argv) == 1) or ((len(argv) > 1) and (argv[1] == "--help")):
+        print(mkProgramHelp())
+        return
+        
+
     d = {}
 
-    file = argv[1]
+    file = argv[-1]
     d = loadData(file, d)
     state = State(d, file)
 
