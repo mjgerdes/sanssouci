@@ -5,7 +5,7 @@
 # Command line tool for building and exploring of dungeons for tabletop RPG. Designed to be accessible for the visually impaired!
 #
 
-
+import os.path
 from random import randrange
 import json
 import sys
@@ -397,18 +397,30 @@ def mkHelp():
         
 
 def mkProgramHelp():
-    out = "dungeme.py - Dungeon control system\nUsage: dungeme.py [OPTIONS] DUNGEONFILE\n\nOptions\n --help - Print this help.\n\nIf a dungeonfile is specified, dungeme will enter into editor mode with the following commands:\n" + mkHelp()
+    out = "dungeme.py - Dungeon control system\nUsage: dungeme.py [OPTIONS] DUNGEONFILE\n\nOptions\n -c - Create a new empty DUNGEONFILE, do not open an existing one.\n --help - Print this help.\n\nIf a dungeonfile is specified, dungeme will enter into editor mode with the following commands:\n" + mkHelp()
     return out
+
+def createDungeonfile(file):
+    f = open(file, "w")
+    f.write('{"current_room" : "0", "next_id": 1, "rooms" : {"0":{"id":"0", "name":"Entry Point"}}, "edges" : {}}')
+    f.flush
+    
 
 def main(argv):
     if (len(argv) == 1) or ((len(argv) > 1) and (argv[1] == "--help")):
         print(mkProgramHelp())
         return
-        
+    file = argv[-1]
+    
+    # for creating empty dungeonfile
+    if (len(argv) > 1) and (argv[1] == "-c"):
+        if os.path.isfile(file):
+            print("Aborting: Cannot create empty dungeonfile '" + file + "'. File exists.")
+            return
+        createDungeonfile(file)
 
     d = {}
 
-    file = argv[-1]
     d = loadData(file, d)
     state = State(d, file)
 
