@@ -13,9 +13,40 @@ class Table(object):
     def tableRange(self):
         d = self._d["dice"]
         return (d, d * self._d["sides"])
+
+    def entryProbability(self, i):
+        return self._entryProbability(i,i)
+
+
+    def entryRangeProbability(self, start, end):
+        return self._entryProbability(start, end)
+
+
+    
+    def _entryProbability(self, start, end):
+        (dice, sides) = (self._d["dice"], self._d["sides"])
+        # we just brute force it by generating all combinations and counting
         
+        def gen(n, k):
+            fs = range(1, sides+1) # faces
+            if n == 1:
+                return [i+k for i in fs]
+
+            return [gen(n-1, f) for f in fs]
+        nestedResults = gen(dice, 0)
+        while nestedResults and (type(nestedResults[0]) == type([])):
+            acc = []
+            for xs in nestedResults:
+                for x in xs:
+                    acc.append(x)
+            
+            nestedResults = acc
+
+        return round(len([n for n in nestedResults if ((n >= start) and (n <= end))]) / (dice * sides), 2) 
+
+
     def freeEntries(self):
-        """Returns a list of all slots in the table that are free. Empty if none are free."""
+        """Returns a list of all slots in the table that are free. Empty if none are free. Does not return a range, only single numbers are considered."""
         (lower, upper) = self.tableRange()
         acc = []
         for i in range(lower, upper+1):
@@ -25,7 +56,7 @@ class Table(object):
                     add = False
 
             if add:
-                acc.append((i,i))
+                acc.append(i)
 
         return acc
 
@@ -103,7 +134,15 @@ def getDiceInput():
         return (dice, sides)
 
 def addEntryDialogue(t):
-    return
+    es = t.freeEntries()
+    if not(es):
+        print("Table is full. Set an entry to something else or drop an entry to make space.")
+        return
+    
+    e = es[0]
+    w = input("Enter text for entry " + str(e) + " (probability " + str(t.entryProbability(e)) + "):")
+    t.setEntry(e, w)
+    return 
         
     
 def mkTableDialogue():
