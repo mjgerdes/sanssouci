@@ -4,6 +4,7 @@
 #
 # Library for random tables
 
+from random import randint
 
 class Table(object):
     def __init__(self, dice, sides, name):
@@ -11,6 +12,7 @@ class Table(object):
 
 
     def tableRange(self):
+        """Returns the range of numbers that can be rolled on the table as a tuple. So a 2d6 table would have a range (2, 12)."""
         d = self._d["dice"]
         return (d, d * self._d["sides"])
 
@@ -22,7 +24,6 @@ class Table(object):
         return self._entryProbability(start, end)
 
 
-    
     def _entryProbability(self, start, end):
         (dice, sides) = (self._d["dice"], self._d["sides"])
         # we just brute force it by generating all combinations and counting
@@ -93,7 +94,20 @@ class Table(object):
             
         # insert new entry
         entries[(start, end)] = w
-            
+
+    def pick(self, n):
+        """Pick a number and return the corresponding entry on the table as a string. Empty string if no entry or out of range."""
+        entries = self._d["entries"]
+        for ((a, b), w) in entries.items():
+            if (a <= n) and (b >= n):
+                return entries[(a,b)]
+        return ""
+
+    def roll(self):
+        """Rolls on the table and returns the result string.""" 
+        (a, b) = self.tableRange()
+        return self.pick(randint(a, b))
+
     def showTable(self):
         w = ""
         dice = self._d["dice"]
@@ -115,7 +129,13 @@ class Table(object):
         
     def printTable(self):
         print(self.showTable())
-        
+
+
+
+#########
+# Interactive Functions
+#######
+
 def getDiceInput():
     while True:
         ws = input("Enter type of table, e.g. 1d8, 2d6, 1d100 etc.").split("d")
