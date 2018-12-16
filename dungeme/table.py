@@ -5,8 +5,24 @@
 # Library for random tables
 
 from random import randint
+from copy import deepcopy
 
 class Table(object):
+    def fromDict(d):
+        # the dictionary will have strings instead of tuples for entries' keys
+        entries = d["entries"]
+        entries2 = dict([(eval(k), v) for (k, v) in entries.items()])
+
+        t = Table(d["dice"], d["sides"], d["name"])
+        t._d = d
+        t._d["entries"] = entries2
+        return t
+
+    def toDict(self):
+        d = deepcopy(self._d)
+        d["entries"] = {str(k) : v for k,v in self._d["entries"].items()}
+        return d
+
     def __init__(self, dice, sides, name):
         self._d = {"dice" : dice, "sides":sides, "name" : name, "description" : "", "entries": {}}
 

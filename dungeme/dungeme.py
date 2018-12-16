@@ -10,6 +10,8 @@ from random import randrange
 import json
 import sys
 import copy
+import table
+
 
 directions = "n ne e se s sw w nw up down".split()
 opdir = "s sw w nw n ne e se down up".split()
