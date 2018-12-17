@@ -235,6 +235,7 @@ class State(object):
             return
 
         self._free(r)
+        self._tableDeleteRoom(r)
         del self.data["rooms"][r]
 
     def deleteRoom(self, args):
@@ -369,8 +370,39 @@ class State(object):
         ks = sorted(self.tables.keys())
         if ks:
             return ks[-1] + 1
+        return 1
+
+    def _tableMapToRoom(self, tableId, roomId):
+        # map a table to a room, though the dict is the other way around
+        tm = self.data["table_map"]
+        if roomId in tm:
+            ts = tm[roomId]
+            ts.append(tableId)
         else:
-            return 1
+            tm[roomId] = [tableId]
+        return
+
+    def _tablesForRoom(self, roomId):
+        return self.data["table_map"].get(roomId, [])
+
+    def _tableMapRemoveFromRoom(self, tableId, roomId):
+        # remove all mappings to a table from a room
+        tm = self.data["table_map"]
+        if not(roomId in tm):
+            return (False, "Room does not exist or has no tables.")
+
+        ts = tm[roomId]
+        if not(tableId in ts):
+            return (False, "Table was not part of room.")
+        tm[roomId] = list(filter(lambda id: id != tableId, ts))
+        return (True, "")
+
+    def _tableDeleteRoom(self, roomId):
+        # called because a room is being deleted, dropds a room entry from the table mapping
+        tm = self.data["table_map"]
+        if roomId in tm:
+            del tm[roomId]
+        return
     
     def tableNew(self, args):
         t = mkTableDialogue()
@@ -380,7 +412,7 @@ class State(object):
         # if no arg, add table to current room
         if len(args) == 0:
             # we map rooms to tables
-            self.data["table_map"][self.currentRoom()["id"]] = id
+            self._tableMapToRoom(id, self.currentRoom()["id"])#self.data["table_map"][self.currentRoom()["id"]] = id
         elif args[0].isnumeric():
             # arg given is specific roomid or -1 for don't attach
             n = args[0]
@@ -388,7 +420,7 @@ class State(object):
                 if not(n in self.data["rooms"]):
                     print("Could not attach table to room " + str(n) + ": Room does not exist.")
                 else:
-                    self.data["table_map"][n] = id
+                    self._tableMapToRoom(id, n) #self.data["table_map"][n] = id
                     
         editTableDialogue(t)
         return
@@ -403,7 +435,32 @@ class State(object):
             w += t.description() + "\n"
         print(w)
         return
+
+    def _tableDelete(self, tableId):
+        # deletes a table
+        if tableId in self.tables:
+            del self.tables[tableId]
+        
+        # remove all mappings from rooms
+        for roomId in self.data["table_map"].keys():
+            self._tableMapRemoveFromRoom(tableId, roomId)
+        return
     
+    def tableDelete(self, args):
+        if not(args) or not(args[0].isnumeric()): 
+            print("Please specify a valid table id (see tgl command)")
+            return
+
+        n = int(args[0])
+        if not(n in self.tables):
+            print("Table with id " + str(n) + " not found. Check tgl for list of tables and their ids")
+            return
+                
+        # all checks out, remove table and all its mappings
+        byeTable = self.tables[n].name()
+        self._tableDelete(n)
+        print("Goodbye table '" + byeTable + "'.")
+        return
 ########
 # Some friend functions
 #########
@@ -433,7 +490,8 @@ commands_full = {
     "d" : (["Show long description of current room."], lambda s, ws: s.showDescription()),
     "sd" : (["[WORDS]", "Set the description for the current room. If arguments are specified, they are used as a one liner description. Otherwise, a multi line edit mode is entered. Finish the description with two newlines."], lambda s, ws: s.setDescription(ws)),
     "tn" : (["[ROOMID]", "Table new. Create a new table. If no argument is specified, will add that table to the current room. If ROOMID is specified and positive, will connect that table to the room with ROOMID, if negative, will not connect table with any room (it's in the global list, see tgl)"], lambda s, ws: s.tableNew(ws)),
-        "tgl" : (["Table global list. List all tables and their id."], lambda s, ws: s.tableGlobalList(ws))
+        "tgl" : (["Table global list. List all tables and their id."], lambda s, ws: s.tableGlobalList(ws)),
+            "tdelete" : (["TABLEID", "Table delete. Removes a table based on id (see tgl). Removes all contents of the table and all references to the table from rooms."], lambda s, ws: s.tableDelete(ws))
     }
 
 # we don't want to use the documentation internally
