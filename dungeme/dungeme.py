@@ -25,7 +25,7 @@ def opposite(direction):
 
 def loadData(filename, data):
     data = json.load(open(filename))
-    data[1] = {k : Table.fromDict(v) for k,v in data[1].items()}
+    data[1] = {int(k) : Table.fromDict(v) for k,v in data[1].items()}
     return data
 
 class State(object):
@@ -52,6 +52,7 @@ class State(object):
         return
 
     def save(self):
+        # note that json will turn dict keys into strings
         s = [self.data, {k : v.toDict() for k,v in self.tables.items()}]
         f = open(self.filename, "w")
         json.dump(s, f)
@@ -382,8 +383,8 @@ class State(object):
             self.data["table_map"][self.currentRoom()["id"]] = id
         elif args[0].isnumeric():
             # arg given is specific roomid or -1 for don't attach
-            n = int(args[0])
-            if n >= 0:
+            n = args[0]
+            if int(n) >= 0:
                 if not(n in self.data["rooms"]):
                     print("Could not attach table to room " + str(n) + ": Room does not exist.")
                 else:
