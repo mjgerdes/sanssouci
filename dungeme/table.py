@@ -23,10 +23,21 @@ class Table(object):
         d["entries"] = {str(k) : v for k,v in self._d["entries"].items()}
         return d
 
-    def __init__(self, dice, sides, name):
+    def __init__(self, dice, sides, name, desc=""):
         self._d = {"dice" : dice, "sides":sides, "name" : name, "description" : "", "entries": {}}
+        self.setDescription(desc)
 
+    def name(self):
+        return self._d["name"]
 
+    def description(self):
+        return self._d["description"]
+
+    def setDescription(self, desc):
+        self._d["description"] = desc
+        return
+    
+    
     def tableRange(self):
         """Returns the range of numbers that can be rolled on the table as a tuple. So a 2d6 table would have a range (2, 12)."""
         d = self._d["dice"]
@@ -55,7 +66,7 @@ class Table(object):
             for xs in nestedResults:
                 for x in xs:
                     acc.append(x)
-            
+                    
             nestedResults = acc
 
         return round(len([n for n in nestedResults if ((n >= start) and (n <= end))]) / (sides ** dice), 2) 
@@ -89,7 +100,7 @@ class Table(object):
         if (start, end) in entries:
             del entries[(start, end)]
         return
-        
+    
     def setEntry(self, n, w):
         return self._setEntry((n,n), w)
 
@@ -160,7 +171,7 @@ class Table(object):
             w += numstring + ((l - len(numstring)) * " ") + "| " + entry 
             if probabilities and (entry != ""):
                 w += " (" + str(100 * self.entryRangeProbability(a, b)) + "%)"
-            w += "\n"
+                w += "\n"
         return w
     
     def printTable(self, probabilities=False, showFree=False):
@@ -202,8 +213,8 @@ def addEntryDialogue(t, entry=False):
         msg = "Enter text for entries " + str(e[0]) + " - " + str(e[1])
     else:
         msg ="Enter text for entry " + str(e[0])
-    w = input(msg + " (probability " + str(t.entryRangeProbability(e[0], e[1])) + "):")
-    t.setEntryRange(e[0], e[1], w)
+        w = input(msg + " (probability " + str(t.entryRangeProbability(e[0], e[1])) + "):")
+        t.setEntryRange(e[0], e[1], w)
     return True
 
 def addAllEntriesDialogue(t):
@@ -238,7 +249,7 @@ def editEntryDialogue(t, start, end):
 
     t.setEntryRange(start, end, inp)
     return
-    
+
 def listFromRangeExpression(w):
     """Returns a list containing to elements if w was a string like 1-100 or 2 - 12 etc. Empty list if no parse."""
     ws = w.split("-")
@@ -264,14 +275,19 @@ def editTableDialogue(t):
                 editEntryDialogue(t, ns[0], ns[1])
             else:
                 print("Could not parse that range, try 2 - 12 or 1-100 or similar.")
+        elif inp == "!fill":
+            addAllEntriesDialogue(t)
         elif inp == "!wipe":
             t._d["entries"] = {}
+
+
         t.printTable(True, True)
-        inp = input("Enter a number or a range to edit. !wipe to wipe the table. q to quit.")
+        inp = input("Enter a number or a range to edit. !wipe to wipe the table, !fill to prompt for every row. q to quit.")
     return
 
 def mkTableDialogue():
     name = input("Table name?")
     (dice, sides) = getDiceInput()
-    return Table(dice, sides, name)
+    desc = input("Short table description:")
+    return Table(dice, sides, name, desc)
         
