@@ -1,0 +1,1 @@
+[{"table_mapping": {}, "current_room": "0", "next_id": 1, "rooms": {"0": {"id": "0", "name": "Entry Point"}}, "edges": {}}, {}]

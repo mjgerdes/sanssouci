@@ -23,15 +23,23 @@ def opposite(direction):
 
     return d[direction]
 
-def loadData(filename, d):
-    d = json.load(open(filename))
-    return d
+def loadData(filename, data):
+    data = json.load(open(filename))
+    data[1] = {k : Table.fromDict(v) for k,v in data[1]}
+    return data
 
 class State(object):
-    def __init__(self, data, filename):
-        self.data = data
-        self.filename = filename
+    blueprint = '[{"table_mapping" : {}, "current_room" : "0", "next_id": 1, "rooms" : {"0":{"id":"0", "name":"Entry Point"}}, "edges" : {}}, {}]'
+    
+    def fromFile(filename):
+        data = []
+        data = loadData(filename, data)
+        return State(data, filename)
 
+    def __init__(self, data, filename):
+        self.data = data[0]
+        self.filename = filename
+        self.tables = data[1]
 
         if not("next_id" in self.data):
             self.data["next_id"] = 1
@@ -42,9 +50,12 @@ class State(object):
             self.data["edges"] = {}
 
     def save(self):
+        s = [self.data, {k : v.toDict() for k,v in self.tables.items()}]
         f = open(self.filename, "w")
-        json.dump(self.data, f)
+        json.dump(s, f)
         f.flush()
+        f.close()
+        
 
     def quit(self):
         self.save()
@@ -350,6 +361,18 @@ class State(object):
                 
     def showDescription(self):
         print(self.currentRoom().get("description", "No Description."))
+        return
+
+########
+# Some friend functions
+#########
+
+def numRooms(s):
+    return len(s.data["rooms"])
+
+########
+# Commands
+#######
 
 
 commands_full = {
@@ -404,7 +427,7 @@ def mkProgramHelp():
 
 def createDungeonfile(file):
     f = open(file, "w")
-    f.write('{"current_room" : "0", "next_id": 1, "rooms" : {"0":{"id":"0", "name":"Entry Point"}}, "edges" : {}}')
+    f.write(State.blueprint)
     f.flush
     
 
@@ -421,11 +444,8 @@ def main(argv):
             return
         createDungeonfile(file)
 
-    d = {}
-
-    d = loadData(file, d)
-    state = State(d, file)
-
+    state = State.fromFile(file)
+    print("Ok. " + str(numRooms(state)) + " room(s) loaded. Enter command. Type 'h' for help.")
     while(True):
         backup = copy.deepcopy(state)
         w = input()
