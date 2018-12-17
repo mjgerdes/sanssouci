@@ -10,7 +10,7 @@ from random import randrange
 import json
 import sys
 import copy
-import table
+from table import *
 
 
 directions = "n ne e se s sw w nw up down".split()
@@ -29,7 +29,7 @@ def loadData(filename, data):
     return data
 
 class State(object):
-    blueprint = '[{"table_mapping" : {}, "current_room" : "0", "next_id": 1, "rooms" : {"0":{"id":"0", "name":"Entry Point"}}, "edges" : {}}, {}]'
+    blueprint = '[{"table_map" : {}, "current_room" : "0", "next_id": 1, "rooms" : {"0":{"id":"0", "name":"Entry Point"}}, "edges" : {"0" : {}}}, {}]'
     
     def fromFile(filename):
         data = []
@@ -45,10 +45,10 @@ class State(object):
             self.data["next_id"] = 1
         if not("rooms" in self.data):
             self.data["rooms"] = {}
-
         if not("edges" in self.data):
             self.data["edges"] = {}
-
+        if not("table_map" in self.data):
+            self.data["table_map"] = {}
     def save(self):
         s = [self.data, {k : v.toDict() for k,v in self.tables.items()}]
         f = open(self.filename, "w")
@@ -362,7 +362,36 @@ class State(object):
     def showDescription(self):
         print(self.currentRoom().get("description", "No Description."))
         return
+    def _tableNextId(self):
+        ks = sorted(self.tables.keys())
+        if ks:
+            return ks[-1] + 1
+        else:
+            return 1
+    
+    def tableNew(self, args):
+        t = mkTableDialogue()
+        id = self._tableNextId()
+        self.tables[id] = t
 
+        # if no arg, add table to current room
+        if len(args) == 0:
+            # we map rooms to tables
+            self.data["table_map"][self.currentRoom()["id"]] = id
+        elif args[0].isnumeric():
+            # arg given is specific roomid or -1 for don't attach
+            n = int(args[0])
+            if n >= 0:
+                if not(n in self.data["rooms"]):
+                    print("Could not attach table to room " + str(n) + ": Room does not exist.")
+                else:
+                    self.data["table_map"][n] = id
+                    
+        editTableDialogue(t)
+        return
+            
+            
+    
 ########
 # Some friend functions
 #########
@@ -390,7 +419,8 @@ commands_full = {
     "r" : (["[ROOMID]", "Read notes for a room. Specify by ROOMID argument, or no argument for current room."], lambda s, ws: s.readNotes(ws)),
     "dnote" : (["ROOMID", "NOTEID", "Delete a note from a room. First argument specifies the room, the second argument specifies the number of the note in that room. You can see the notenumber/id by using 'r'. You must specify both arguments explicitly."], lambda s, ws: s.deleteNote(ws)),
     "d" : (["Show long description of current room."], lambda s, ws: s.showDescription()),
-    "sd" : (["[WORDS]", "Set the description for the current room. If arguments are specified, they are used as a one liner description. Otherwise, a multi line edit mode is entered. Finish the description with two newlines."], lambda s, ws: s.setDescription(ws))
+    "sd" : (["[WORDS]", "Set the description for the current room. If arguments are specified, they are used as a one liner description. Otherwise, a multi line edit mode is entered. Finish the description with two newlines."], lambda s, ws: s.setDescription(ws)),
+    "tn" : (["[ROOMID]", "Table new. Create a new table. If no argument is specified, will add that table to the current room. If ROOMID is specified and positive, will connect that table to the room with ROOMID, if negative, will not connect table with any room (it's in the global list, see tgl)"], lambda s, ws: s.tableNew(ws))
     }
 
 # we don't want to use the documentation internally
