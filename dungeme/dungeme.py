@@ -25,7 +25,7 @@ def opposite(direction):
 
 def loadData(filename, data):
     data = json.load(open(filename))
-    data[1] = {k : Table.fromDict(v) for k,v in data[1]}
+    data[1] = {k : Table.fromDict(v) for k,v in data[1].items()}
     return data
 
 class State(object):
@@ -49,6 +49,8 @@ class State(object):
             self.data["edges"] = {}
         if not("table_map" in self.data):
             self.data["table_map"] = {}
+        return
+
     def save(self):
         s = [self.data, {k : v.toDict() for k,v in self.tables.items()}]
         f = open(self.filename, "w")
@@ -390,7 +392,16 @@ class State(object):
         editTableDialogue(t)
         return
             
-            
+    def tableGlobalList(self, args):
+        print("Id\tName\tType\tDescription")
+        w = ""
+        for (id, t) in self.tables.items():
+            w += str(id) + "\t"
+            w += t.name() + "\t"
+            w += t.type() + "\t"
+            w += t.description() + "\n"
+        print(w)
+        return
     
 ########
 # Some friend functions
@@ -420,7 +431,8 @@ commands_full = {
     "dnote" : (["ROOMID", "NOTEID", "Delete a note from a room. First argument specifies the room, the second argument specifies the number of the note in that room. You can see the notenumber/id by using 'r'. You must specify both arguments explicitly."], lambda s, ws: s.deleteNote(ws)),
     "d" : (["Show long description of current room."], lambda s, ws: s.showDescription()),
     "sd" : (["[WORDS]", "Set the description for the current room. If arguments are specified, they are used as a one liner description. Otherwise, a multi line edit mode is entered. Finish the description with two newlines."], lambda s, ws: s.setDescription(ws)),
-    "tn" : (["[ROOMID]", "Table new. Create a new table. If no argument is specified, will add that table to the current room. If ROOMID is specified and positive, will connect that table to the room with ROOMID, if negative, will not connect table with any room (it's in the global list, see tgl)"], lambda s, ws: s.tableNew(ws))
+    "tn" : (["[ROOMID]", "Table new. Create a new table. If no argument is specified, will add that table to the current room. If ROOMID is specified and positive, will connect that table to the room with ROOMID, if negative, will not connect table with any room (it's in the global list, see tgl)"], lambda s, ws: s.tableNew(ws)),
+        "tgl" : (["Table global list. List all tables and their id."], lambda s, ws: s.tableGlobalList(ws))
     }
 
 # we don't want to use the documentation internally

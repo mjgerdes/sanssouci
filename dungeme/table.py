@@ -30,6 +30,9 @@ class Table(object):
     def name(self):
         return self._d["name"]
 
+    def type(self):
+        return str(self._d["dice"]) + "d" + str(self._d["sides"])
+    
     def description(self):
         return self._d["description"]
 
@@ -153,7 +156,7 @@ class Table(object):
         w = ""
         dice = self._d["dice"]
         sides = self._d["sides"]
-        dicestring = str(dice) + "d" + str(sides)
+        dicestring = self.type()
         w += " " +dicestring + " | " + self._d["name"] + "\n"
         l = len(dicestring) + 2
         w += (l * "-") + "+" + (12 * "-") + "\n"
