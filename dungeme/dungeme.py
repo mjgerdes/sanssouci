@@ -505,10 +505,45 @@ class State(object):
         # finally, all checks out
         print(self.tables[tableId].name() + ": " + self._tableRoll(tableId) )
         return
-                
-
+    def _tableEdit(self, tableId):
+        if not(tableId in self.tables):
+            print("Error: Cannot edit table. Table with id " + str(tableId) + " not found.")
+            return
+        editTableDialogue(self.tables[tableId])
         return
 
+    def tableEdit(self, args):
+        #if no args, try to find a table in the current room
+        if not(args):
+            ts = self.data["table_map"].get(self.currentRoom()["id"], [])
+            if not(ts):
+                print("No table to edit. Either go to a room with a table or specify the table id.")
+                return
+            elif len(ts) > 1:
+                # more than 1 table, offer a choice
+                self._tableList(ts)
+                inp = input("More than 1 table in room. Specify id to edit:")
+                if not(inp.isnumeric()):
+                    print("Not a valid table id.")
+                    return
+                tableId = int(inp)
+                if not(tableId in ts):
+                    print("That id is not of a table in this room.")
+                    return
+            else: # ts is exactly one element
+                tableId = ts[0]
+        else: # args has elements
+            if not(args[0].isnumeric()):
+                print("Please specify a valid table id.")
+                return
+            tableId = int(args[0])
+
+        # all checks out, _tableEdit checks for existence of table
+        self._tableEdit(tableId)
+        return
+    
+            
+            
 ########
 # Some friend functions
 #########
@@ -540,7 +575,8 @@ commands_full = {
     "tn" : (["[ROOMID]", "Table new. Create a new table. If no argument is specified, will add that table to the current room. If ROOMID is specified and positive, will connect that table to the room with ROOMID, if negative, will not connect table with any room (it's in the global list, see tgl)"], lambda s, ws: s.tableNew(ws)),
         "tgl" : (["Table global list. List all tables and their id."], lambda s, ws: s.tableGlobalList(ws)),
             "tdelete" : (["TABLEID", "Table delete. Removes a table based on id (see tgl). Removes all contents of the table and all references to the table from rooms."], lambda s, ws: s.tableDelete(ws)),
-                "tr" : (["[TABLEID]", "Table roll. Rolls on the table in the current room if TABLEID is not specified. If it is specified, rolls on that table. If the current room has multiple tables you will be given a selection."], lambda s, ws: s.tableRoll(ws))
+                "tr" : (["[TABLEID]", "Table roll. Rolls on the table in the current room if TABLEID is not specified. If it is specified, rolls on that table. If the current room has multiple tables you will be given a selection."], lambda s, ws: s.tableRoll(ws)),
+                    "te" : (["[TABLEID]", "Table edit. If no argument is specified, will pick table from current room. Otherwise, opens edit dialogue for specified TABLEID."], lambda s, ws: s.tableEdit(ws))
     }
 
 # we don't want to use the documentation internally
