@@ -424,16 +424,20 @@ class State(object):
                     
         editTableDialogue(t)
         return
-            
-    def tableGlobalList(self, args):
+
+
+    def _tableList(self, tableItems):
         print("Id\tName\tType\tDescription")
         w = ""
-        for (id, t) in self.tables.items():
+        for (id, t) in tableItems:
             w += str(id) + "\t"
             w += t.name() + "\t"
             w += t.type() + "\t"
             w += t.description() + "\n"
-        print(w)
+        return w
+    
+    def tableGlobalList(self, args):
+        print(self._tableList(self.tables.items()))
         return
 
     def _tableDelete(self, tableId):
@@ -461,6 +465,50 @@ class State(object):
         self._tableDelete(n)
         print("Goodbye table '" + byeTable + "'.")
         return
+    def _tableRoll(self, tableId):
+        if not(tableId in self.tables):
+            print("Error: Could not roll on table. No table with id " + str(tableId) + ".")
+            return ""
+        return self.tables[tableId].roll()
+        
+
+        
+    def tableRoll(self, args):
+        # roll on table in room if no arg
+        tm = self.data["table_map"]
+        if not(args):
+            roomId = self.currentRoom()["id"]
+            ts = tm.get(roomId, [])
+            if not(ts):
+                print("Room has no tables. Please specify a table ID (see tgl command) to roll on a table.")
+                return
+            elif len(ts) > 1:
+                # give a selection
+                print(self._tableList([(tid, self.tables[tid]) for tid in ts]))
+                inp = input("Pick a table to roll on:")
+                if not(inp.isnumeric()):
+                    print("Please specify a valid table id.")
+                    return
+                tableId = int(inp)
+            else:
+                # only one table in room
+                tableId = ts[0]
+        else: # argument was specified
+            if not(args[0].isnumeric()):
+                print("Please specify a table id as argument.")
+                return
+            tableId = int(args[0])
+            if not(tableId in self.tables):
+                print("No such table with id " + str(tableId) + ".")
+                return
+
+        # finally, all checks out
+        print(self.tables[tableId].name() + ": " + self._tableRoll(tableId) )
+        return
+                
+
+        return
+
 ########
 # Some friend functions
 #########
@@ -491,7 +539,8 @@ commands_full = {
     "sd" : (["[WORDS]", "Set the description for the current room. If arguments are specified, they are used as a one liner description. Otherwise, a multi line edit mode is entered. Finish the description with two newlines."], lambda s, ws: s.setDescription(ws)),
     "tn" : (["[ROOMID]", "Table new. Create a new table. If no argument is specified, will add that table to the current room. If ROOMID is specified and positive, will connect that table to the room with ROOMID, if negative, will not connect table with any room (it's in the global list, see tgl)"], lambda s, ws: s.tableNew(ws)),
         "tgl" : (["Table global list. List all tables and their id."], lambda s, ws: s.tableGlobalList(ws)),
-            "tdelete" : (["TABLEID", "Table delete. Removes a table based on id (see tgl). Removes all contents of the table and all references to the table from rooms."], lambda s, ws: s.tableDelete(ws))
+            "tdelete" : (["TABLEID", "Table delete. Removes a table based on id (see tgl). Removes all contents of the table and all references to the table from rooms."], lambda s, ws: s.tableDelete(ws)),
+                "tr" : (["[TABLEID]", "Table roll. Rolls on the table in the current room if TABLEID is not specified. If it is specified, rolls on that table. If the current room has multiple tables you will be given a selection."], lambda s, ws: s.tableRoll(ws))
     }
 
 # we don't want to use the documentation internally
