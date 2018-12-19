@@ -460,12 +460,13 @@ class State(object):
 
     def _tableDelete(self, tableId):
         # deletes a table
-        if tableId in self.tables:
-            del self.tables[tableId]
-        
+     
         # remove all mappings from rooms
         for roomId in self.data["table_map"].keys():
             self._tableMapRemoveFromRoom(tableId, roomId)
+
+        if tableId in self.tables:
+            del self.tables[tableId]
         return
     
     def tableDelete(self, args):
