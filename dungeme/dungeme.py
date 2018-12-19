@@ -618,6 +618,21 @@ class State(object):
         print("Ok. Table '" + self.tables[tableId].name() + "' removed from room " + roomId + ".")
         return
 
+    def tableList(self, args):
+        if not(args):
+            roomId = self.currentRoom()["id"]
+        else:
+            w = args[0]
+            if not(w in self.data["rooms"]):
+                print("Room " + w + " not found.Please specify a valid room id.")
+                return
+            roomId = w
+
+        if not(self._tablesForRoom(roomId)):
+            print("No tables for " + self.data["rooms"][roomId]["name"] + ".")
+            return
+        print(self._tableList([(tid, self.tables[tid]) for tid in self._tablesForRoom(roomId)]))
+        return
 
 ########
 # Some friend functions
@@ -649,12 +664,13 @@ commands_full = {
     "d" : (["Show long description of current room."], lambda s, ws: s.showDescription()),
     "sd" : (["[WORDS]", "Set the description for the current room. If arguments are specified, they are used as a one liner description. Otherwise, a multi line edit mode is entered. Finish the description with two newlines."], lambda s, ws: s.setDescription(ws)),
     "tn" : (["[ROOMID]", "Table new. Create a new table. If no argument is specified, will add that table to the current room. If ROOMID is specified and positive, will connect that table to the room with ROOMID, if negative, will not connect table with any room (it's in the global list, see tgl)"], lambda s, ws: s.tableNew(ws)),
-        "tgl" : (["Table global list. List all tables and their id."], lambda s, ws: s.tableGlobalList(ws)),
-            "tdelete" : (["TABLEID", "Table delete. Removes a table based on id (see tgl). Removes all contents of the table and all references to the table from rooms."], lambda s, ws: s.tableDelete(ws)),
-                "tr" : (["[TABLEID]", "Table roll. Rolls on the table in the current room if TABLEID is not specified. If it is specified, rolls on that table. If the current room has multiple tables you will be given a selection."], lambda s, ws: s.tableRoll(ws)),
-                    "te" : (["[TABLEID]", "Table edit. If no argument is specified, will pick table from current room. Otherwise, opens edit dialogue for specified TABLEID."], lambda s, ws: s.tableEdit(ws)),
-                        "ta" : (["TABLEID", "[ROOMID]", "Table add. Adds an existing table, specified by TABLEID, to a room. If ROOMID is specified, add table to that room if it exists, otherwise, adds table to the current room."], lambda s, ws: s.tableAdd(ws)),
-                            "tremove" : (["[TABLEID | TABLEID ROOMID]", "Table remove. Removes a table from a room, though the table itself remains in the global list. If no arguments are specified, tries to find a table in the current room and remove it. If TABLEID is specified on its own, tries to remove a table with that id from the current room. If both TABLEID and ROOMID are specified, tries to remove the specified table from the specified room."], lambda s, ws: s.tableRemove(ws))
+    "tgl" : (["Table global list. List all tables and their id."], lambda s, ws: s.tableGlobalList(ws)),
+    "tdelete" : (["TABLEID", "Table delete. Removes a table based on id (see tgl). Removes all contents of the table and all references to the table from rooms."], lambda s, ws: s.tableDelete(ws)),
+    "tr" : (["[TABLEID]", "Table roll. Rolls on the table in the current room if TABLEID is not specified. If it is specified, rolls on that table. If the current room has multiple tables you will be given a selection."], lambda s, ws: s.tableRoll(ws)),
+    "te" : (["[TABLEID]", "Table edit. If no argument is specified, will pick table from current room. Otherwise, opens edit dialogue for specified TABLEID."], lambda s, ws: s.tableEdit(ws)),
+    "ta" : (["TABLEID", "[ROOMID]", "Table add. Adds an existing table, specified by TABLEID, to a room. If ROOMID is specified, add table to that room if it exists, otherwise, adds table to the current room."], lambda s, ws: s.tableAdd(ws)),
+    "tremove" : (["[TABLEID | TABLEID ROOMID]", "Table remove. Removes a table from a room, though the table itself remains in the global list. If no arguments are specified, tries to find a table in the current room and remove it. If TABLEID is specified on its own, tries to remove a table with that id from the current room. If both TABLEID and ROOMID are specified, tries to remove the specified table from the specified room."], lambda s, ws: s.tableRemove(ws)),
+    "tl" : (["[ROOMID]", "Table list. List tables for a specific room. If ROOMID is not specified, lists tables for the current room. For a global list of tables, see tgl."], lambda s, ws: s.tableList(ws))
     }
 
 
