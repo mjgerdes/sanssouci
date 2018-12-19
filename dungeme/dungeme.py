@@ -374,9 +374,20 @@ class State(object):
 
     def _tableMapToRoom(self, tableId, roomId):
         # map a table to a room, though the dict is the other way around
+        if not(tableId in self.tables):
+            print("Error: Table with id " + str(tableId) + " not found.")
+            return
+
+        if not(roomId in self.data["rooms"]):
+            print("Error: Room with id " + str(roomId) + " not found.")
+            return
+        
         tm = self.data["table_map"]
         if roomId in tm:
             ts = tm[roomId]
+            if tableId in ts:
+                #no duplicates, but we don't need to advertise this i think
+                return
             ts.append(tableId)
         else:
             tm[roomId] = [tableId]
@@ -478,7 +489,7 @@ class State(object):
         tm = self.data["table_map"]
         if not(args):
             roomId = self.currentRoom()["id"]
-            ts = tm.get(roomId, [])
+            ts = self._tablesForRoom(roomId)
             if not(ts):
                 print("Room has no tables. Please specify a table ID (see tgl command) to roll on a table.")
                 return
@@ -515,7 +526,7 @@ class State(object):
     def tableEdit(self, args):
         #if no args, try to find a table in the current room
         if not(args):
-            ts = self.data["table_map"].get(self.currentRoom()["id"], [])
+            ts = self._tablesForRoom(self.currentRoom()["id"])
             if not(ts):
                 print("No table to edit. Either go to a room with a table or specify the table id.")
                 return
@@ -541,9 +552,30 @@ class State(object):
         # all checks out, _tableEdit checks for existence of table
         self._tableEdit(tableId)
         return
-    
-            
-            
+
+    def tableAdd(self, args):
+        if not(args):
+            print("No table id specified. If you want to create a new table and add it to this room, try using tn.")
+            return
+
+        if not(args[0].isnumeric()):
+            print("Please specify a valid table id as a first argument.")
+            return
+
+        tableId = int(args[0])
+        if len(args) == 1:
+            # no roomId was specified, try using current room
+            roomId = self.currentRoom()["id"]
+        else:
+            if not(args[1].isnumeric()):
+                print("Please specify a valid room id as a second argument, or specify no argument to add the table to the current room.")
+                return
+            roomId = args[1]
+        # all checks out, tableId and roomId will be verified in _tableMapToRoom
+        self._tableMapToRoom(tableId, roomId)
+        return
+
+
 ########
 # Some friend functions
 #########
@@ -551,6 +583,7 @@ class State(object):
 def numRooms(s):
     return len(s.data["rooms"])
 
+    
 ########
 # Commands
 #######
@@ -576,8 +609,10 @@ commands_full = {
         "tgl" : (["Table global list. List all tables and their id."], lambda s, ws: s.tableGlobalList(ws)),
             "tdelete" : (["TABLEID", "Table delete. Removes a table based on id (see tgl). Removes all contents of the table and all references to the table from rooms."], lambda s, ws: s.tableDelete(ws)),
                 "tr" : (["[TABLEID]", "Table roll. Rolls on the table in the current room if TABLEID is not specified. If it is specified, rolls on that table. If the current room has multiple tables you will be given a selection."], lambda s, ws: s.tableRoll(ws)),
-                    "te" : (["[TABLEID]", "Table edit. If no argument is specified, will pick table from current room. Otherwise, opens edit dialogue for specified TABLEID."], lambda s, ws: s.tableEdit(ws))
+                    "te" : (["[TABLEID]", "Table edit. If no argument is specified, will pick table from current room. Otherwise, opens edit dialogue for specified TABLEID."], lambda s, ws: s.tableEdit(ws)),
+                        "ta" : (["TABLEID", "[ROOMID]", "Table add. Adds an existing table, specified by TABLEID, to a room. If ROOMID is specified, add table to that room if it exists, otherwise, adds table to the current room."], lambda s, ws: s.tableAdd(ws))
     }
+
 
 # we don't want to use the documentation internally
 commands = {key : value[1] for (key, value) in commands_full.items()}
