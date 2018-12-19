@@ -642,7 +642,22 @@ class State(object):
 def numRooms(s):
     return len(s.data["rooms"])
 
-    
+def transferTables(s1, s2):
+    """Adds tables from s1 state S1 to state S2. Does not maintain table mappings, or table Ids. Does not add table from S1 if a table in S2 is present with the same name and type."""
+    if not(s2.tables):
+        s2.tables = s1.tables
+        return
+
+    for (_, t1) in s1.tables.items():
+        add = True
+        for (_, t2) in s2.tables.items():
+            if (t1.name() == t2.name()) and (t1.type() == t2.type()):
+                add = False
+                break
+        if add:
+            s2.tables[s2._tableNextId()] = t1
+    return 
+
 ########
 # Commands
 #######
@@ -704,7 +719,7 @@ def mkHelp():
         
 
 def mkProgramHelp():
-    out = "dungeme.py - Dungeon control system\nUsage: dungeme.py [OPTIONS] DUNGEONFILE\n\nOptions\n -c - Create a new empty DUNGEONFILE, do not open an existing one.\n --help - Print this help.\n\nIf a dungeonfile is specified, dungeme will enter into editor mode with the following commands:\n" + mkHelp()
+    out = "dungeme.py - Dungeon control system\nUsage: dungeme.py [OPTIONS] DUNGEONFILE\n\nOptions\n -c - Create a new empty DUNGEONFILE, do not open an existing one.\n -t, --merge-tables TABLEFILE - Merges all tables found in TABLEFILE into DUNGEONFILE before opening DUNGEONFILE. Does not replace tables or add duplicates. TABLEFILE is a regular dungeon file.\n --help - Print this help.\n\nIf a dungeonfile is specified, dungeme will enter into editor mode with the following commands:\n" + mkHelp()
     return out
 
 def createDungeonfile(file):
@@ -727,6 +742,17 @@ def main(argv):
         createDungeonfile(file)
 
     state = State.fromFile(file)
+        
+    if (len(argv) > 2) and ((argv[1] == "-t") or (argv[1] == "--merge-tables")):
+        tableFile = argv[2]
+        if not(os.path.isfile(tableFile)):
+            print("Error: Could not find file '" + tableFile + "' to merge tables from.")
+            return
+        tableState = State.fromFile(tableFile)
+        print("Merging tables...")
+        transferTables(tableState, state)
+
+
     print("Ok. " + str(numRooms(state)) + " room(s) loaded. Enter command. Type 'h' for help.")
     while(True):
         backup = copy.deepcopy(state)
