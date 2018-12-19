@@ -280,12 +280,33 @@ def editTableDialogue(t):
                 print("Could not parse that range, try 2 - 12 or 1-100 or similar.")
         elif inp == "!fill":
             addAllEntriesDialogue(t)
+        elif inp == "!paste":
+            es = t.freeEntries()
+            if not(es):
+                print("No free entries available for pasting. Try !wipe to make space.")
+            else:
+                print("Copy paste entries here. One per line. Two newlines end input. Will try to fill in the remaining free entries of the table with lines you paste, discarding excess lines. Possibly, !wipe the table beforehand.")
+                ws = []
+                while True:
+                    w = input()
+                    if w:
+                        ws.append(w)
+                    else:
+                        break
+                    
+                es.reverse()
+                for i in range(len(ws)):
+                    if not(es):
+                        print("No more free entries. " + str(len(ws) - i) + "input lines discarded.")
+                        break
+                    e = es.pop()
+                    t.setEntryRange(e,e, ws[i])
         elif inp == "!wipe":
             t._d["entries"] = {}
 
 
         t.printTable(True, True)
-        inp = input("Enter a number or a range to edit. !wipe to wipe the table, !fill to prompt for every row. q to quit.")
+        inp = input("Enter a number or a range to edit. !wipe to wipe the table, !fill to prompt for every row. !paste to bluk fill table. q to quit.")
     return
 
 def mkTableDialogue():
