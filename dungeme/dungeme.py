@@ -398,13 +398,20 @@ class State(object):
 
     def _tableMapRemoveFromRoom(self, tableId, roomId):
         # remove all mappings to a table from a room
+        # sanity check
+        if not(roomId in self.data["rooms"]):
+            return (False, "Room does not seem to exist.")
+
+        if not(tableId in self.tables):
+            return (False, "Table does not seem to exist.")
+               
         tm = self.data["table_map"]
         if not(roomId in tm):
-            return (False, "Room does not exist or has no tables.")
+            return (False, "Room has no tables, so none were removed.")
 
         ts = tm[roomId]
         if not(tableId in ts):
-            return (False, "Table was not part of room.")
+            return (False, "Table is not part of room. Nothing removed.")
         tm[roomId] = list(filter(lambda id: id != tableId, ts))
         return (True, "")
 
@@ -419,7 +426,7 @@ class State(object):
         t = mkTableDialogue()
         id = self._tableNextId()
         self.tables[id] = t
-
+        
         # if no arg, add table to current room
         if len(args) == 0:
             # we map rooms to tables
@@ -532,7 +539,7 @@ class State(object):
                 return
             elif len(ts) > 1:
                 # more than 1 table, offer a choice
-                self._tableList(ts)
+                self._tableList([(tid, self.tables[tid]) for tid in ts])
                 inp = input("More than 1 table in room. Specify id to edit:")
                 if not(inp.isnumeric()):
                     print("Not a valid table id.")
@@ -575,6 +582,42 @@ class State(object):
         self._tableMapToRoom(tableId, roomId)
         return
 
+    def tableRemove(self, args):
+        tableId = False
+        #if no args, try to remove the current room's table from the room
+        if not(args):
+            roomId = self.currentRoom()["id"]
+            ts = self._tablesForRoom(roomId)
+            if not(ts):
+                print("No tables to remove from this room. Specify arguments to remove specific table from specific room")
+                return
+            elif len(ts) > 1:
+                print(self._tableList([(tid, self.tables[tid]) for tid in ts]))
+                inp = input("Pick a table to remove from this room:") # is processed later
+            else: # ts has exactly one element
+                tableId = ts[0]
+        elif len(args) == 1: # tableId was specified
+            inp = args[0] # processed later
+            roomId = self.currentRoom()["id"]
+        else: # tableid and roomid were specified
+            inp = args[0]
+            roomId = args[1]
+        # sanitize tableId input from either argument or menu
+        if not(tableId):
+            if not(inp.isnumeric()):
+                print("Please specify a valid table id.")
+                return
+            else:
+                tableId = int(inp)
+            
+        # all checks out, remove table from room
+        (success, msg) = self._tableMapRemoveFromRoom(tableId, roomId)
+        if not(success):
+            print(msg)
+            return
+        print("Ok. Table '" + self.tables[tableId].name() + "' removed from room " + roomId + ".")
+        return
+
 
 ########
 # Some friend functions
@@ -610,7 +653,8 @@ commands_full = {
             "tdelete" : (["TABLEID", "Table delete. Removes a table based on id (see tgl). Removes all contents of the table and all references to the table from rooms."], lambda s, ws: s.tableDelete(ws)),
                 "tr" : (["[TABLEID]", "Table roll. Rolls on the table in the current room if TABLEID is not specified. If it is specified, rolls on that table. If the current room has multiple tables you will be given a selection."], lambda s, ws: s.tableRoll(ws)),
                     "te" : (["[TABLEID]", "Table edit. If no argument is specified, will pick table from current room. Otherwise, opens edit dialogue for specified TABLEID."], lambda s, ws: s.tableEdit(ws)),
-                        "ta" : (["TABLEID", "[ROOMID]", "Table add. Adds an existing table, specified by TABLEID, to a room. If ROOMID is specified, add table to that room if it exists, otherwise, adds table to the current room."], lambda s, ws: s.tableAdd(ws))
+                        "ta" : (["TABLEID", "[ROOMID]", "Table add. Adds an existing table, specified by TABLEID, to a room. If ROOMID is specified, add table to that room if it exists, otherwise, adds table to the current room."], lambda s, ws: s.tableAdd(ws)),
+                            "tremove" : (["[TABLEID | TABLEID ROOMID]", "Table remove. Removes a table from a room, though the table itself remains in the global list. If no arguments are specified, tries to find a table in the current room and remove it. If TABLEID is specified on its own, tries to remove a table with that id from the current room. If both TABLEID and ROOMID are specified, tries to remove the specified table from the specified room."], lambda s, ws: s.tableRemove(ws))
     }
 
 
