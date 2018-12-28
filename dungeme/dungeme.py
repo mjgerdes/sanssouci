@@ -24,6 +24,15 @@ def opposite(direction):
 
     return d[direction]
 
+def yesnoInput(prompt):
+    while True:
+        w = input(prompt + " [y/n]:")
+        if w == "y":
+            return True
+        if w == "n":
+            return False
+        
+
 def multilineInput(prompt):
     w = input(prompt)
     ws = []
@@ -656,11 +665,7 @@ class State(object):
             print("Not a valid skill identifier.")
             return
 
-
-        if skillKey in self.data["rooms"][roomId]["skill_checks"]:
-            self.data["rooms"][roomId]["skill_checks"].append(skillCheckList)
-        else:
-            self.data["rooms"][roomId]["skill_checks"] = [skillCheckList]
+        self.data["rooms"][roomId]["skill_checks"].append(skillCheckList)
         return
 
     def _skillRemove(self, roomId, i):
@@ -724,7 +729,12 @@ class State(object):
         (skillKey, dc, name, desc, success, failure) = tuple(skillCheckList)
         w = "\n"
         w += name + "\nDC " + str(dc) + " " + self.data["skills"][skillKey] + " check\n"
-        w += desc + "\nOn success: " + success + "\nOn Failure: " + failure + "\n"
+        if desc:
+            w += desc + "\n"
+        if success:
+            w += "On success: " + success + "\n"
+        if failure:
+            w += "On Failure: " + failure + "\n"
         return w
 
     def skillList(self, args):
@@ -738,9 +748,39 @@ class State(object):
         for s in skillChecks:
             print(self._skillShow(s))
         return 
-            
 
-########
+    def _skillShort(self, skillCheckList):
+        s = skillCheckList
+        return s[2] + " (DC " + str(s[1]) + " " + self._skill(s[0]) + " check)"
+    
+    def skillDelete(self, args):
+        # prompts skills of current room for removal
+        roomId = self.currentRoom()['id']
+        skillchecks = self._skillsForRoom(roomId)
+        if not(skillchecks ):
+            print("No skill checks in current room.")
+            return
+        elif len(skillchecks) == 1:
+            if yesnoInput("Really remove " + self._skillShort(skillchecks[0]) + "?"):
+                self._skillRemove(roomId, 0)
+                print("Ok. Skill removed.")
+            else:
+                return
+        else: # there are multiple skillchecks present
+            for i in range(0, len(skillchecks)):
+                print(str(i) + " : " + self._skillShort(skillchecks[i]))
+            w = input("Enter which skill to remove from this room:")
+            if not(w.isnumeric()):
+                print("Please enter a valid skill check number as above.")
+                return
+
+            print("Goodbye skill check " + self._skillShort(skillchecks[int(w)]) + "!")
+            self._skillRemove(roomId, int(w))
+            return
+                
+
+            
+            ########
 # Some friend functions
 #########
 
@@ -793,7 +833,8 @@ commands_full = {
     "tremove" : (["[TABLEID | TABLEID ROOMID]", "Table remove. Removes a table from a room, though the table itself remains in the global list. If no arguments are specified, tries to find a table in the current room and remove it. If TABLEID is specified on its own, tries to remove a table with that id from the current room. If both TABLEID and ROOMID are specified, tries to remove the specified table from the specified room."], lambda s, ws: s.tableRemove(ws)),
     "tl" : (["[ROOMID]", "Table list. List tables for a specific room. If ROOMID is not specified, lists tables for the current room. For a global list of tables, see tgl."], lambda s, ws: s.tableList(ws)),
         "sa" : (["Skillcheck Add. Add a skillcheck to the current room. Includes name, dc, description, success and failure states. All parameters acquired via prompt."], lambda s, ws: s.skillAdd(ws)),
-            "sl" : (["Skillcheck list. List all skillchecks in current room."], lambda s, ws: s.skillList(ws))
+            "sl" : (["Skillcheck list. List all skillchecks in current room."], lambda s, ws: s.skillList(ws)),
+                "sdelete" : (["Skillcheck delete. Delete a skillcheck from a room. Will prompt for skill check to remove, if any."], lambda s, ws: s.skillDelete(ws))
     }
 
 
@@ -888,3 +929,4 @@ def dir2(x):
         if(w[0] != "_"):
             print(w)
             
+
