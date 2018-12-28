@@ -47,7 +47,8 @@ def loadData(filename, data):
     return data
 
 class State(object):
-    blueprint = '[{"skills" : ' + str(DEFAULTSKILLDICT).replace("'", '"') + ', "table_map" : {}, "current_room" : "0", "next_id": 1, "rooms" : {"0":{"id":"0", "name":"Entry Point"}}, "edges" : {"0" : {}}}, {}]'
+    def blueprint(skills):
+        return '[{"skills" : ' + str(skills).replace("'", '"') + ', "table_map" : {}, "current_room" : "0", "next_id": 1, "rooms" : {"0":{"id":"0", "name":"Entry Point"}}, "edges" : {"0" : {}}}, {}]'
     
     def fromFile(filename):
         data = []
@@ -870,9 +871,28 @@ def mkProgramHelp():
     out = "dungeme.py - Dungeon control system\nUsage: dungeme.py [OPTIONS] DUNGEONFILE\n\nOptions\n -c - Create a new empty DUNGEONFILE, do not open an existing one.\n -t, --merge-tables TABLEFILE - Merges all tables found in TABLEFILE into DUNGEONFILE before opening DUNGEONFILE. Does not replace tables or add duplicates. TABLEFILE is a regular dungeon file.\n --help - Print this help.\n\nIf a dungeonfile is specified, dungeme will enter into editor mode with the following commands:\n" + mkHelp()
     return out
 
-def createDungeonfile(file):
+def getSkillDictFromFile(skillfile):
+    f = open(skillfile, "r")
+    ws = f.read().split("\n")
+    d = {}
+    for line in ws:
+        words = line.split("\t")
+        if len(words) < 2:
+            continue
+        d[words[0]] = words[1]
+    f.close()
+    return d
+
+
+def createDungeonfile(file, skillfile=None):
     f = open(file, "w")
-    f.write(State.blueprint)
+    if skillfile:
+        skills = getSkillDictFromFile(skillfile)
+    else:
+        skills = DEFAULTSKILLDICT
+        
+    f.write(State.blueprint(skills))
+
     f.flush
     
 
@@ -887,7 +907,15 @@ def main(argv):
         if os.path.isfile(file):
             print("Aborting: Cannot create empty dungeonfile '" + file + "'. File exists.")
             return
-        createDungeonfile(file)
+        if (len(argv) > 3) and (argv[-1] != argv[-2]):
+            skillfile = argv[-2]
+            if not(os.path.isfile(skillfile)):
+                print("Skillfile not found.")
+                return
+        else:
+            skillfile = ""
+            
+        createDungeonfile(file, skillfile)
 
     state = State.fromFile(file)
         
