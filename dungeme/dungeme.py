@@ -12,6 +12,7 @@ import sys
 import copy
 from table import *
 
+DEFAULTSKILLDICT = { "str" : "Strength", "dex" : "Dexterity", "con" : "Constitution", "int" : "Intelligence", "wis" : "Wisdom", "cha" : "Charisma" }
 
 directions = "n ne e se s sw w nw up down".split()
 opdir = "s sw w nw n ne e se down up".split()
@@ -23,13 +24,21 @@ def opposite(direction):
 
     return d[direction]
 
+def multilineInput(prompt):
+    w = input(prompt)
+    ws = []
+    while w:
+        ws.append(w)
+        w = input("> ")
+    return "\n".join(ws)
+
 def loadData(filename, data):
     data = json.load(open(filename))
     data[1] = {int(k) : Table.fromDict(v) for k,v in data[1].items()}
     return data
 
 class State(object):
-    blueprint = '[{"table_map" : {}, "current_room" : "0", "next_id": 1, "rooms" : {"0":{"id":"0", "name":"Entry Point"}}, "edges" : {"0" : {}}}, {}]'
+    blueprint = '[{"skills" : ' + str(DEFAULTSKILLDICT).replace("'", '"') + ', "table_map" : {}, "current_room" : "0", "next_id": 1, "rooms" : {"0":{"id":"0", "name":"Entry Point"}}, "edges" : {"0" : {}}}, {}]'
     
     def fromFile(filename):
         data = []
@@ -65,7 +74,7 @@ class State(object):
         exit()
 
     def create(self, roomName):
-        newRoom = { "id": str(self.data["next_id"]), "name" : roomName }
+        newRoom = { "id": str(self.data["next_id"]), "name" : roomName , 'skill_checks' : []}
         self.data["next_id"] += 1
         self.data["rooms"][newRoom["id"]] = newRoom
         self.data["edges"][newRoom["id"]] = {}
@@ -635,6 +644,102 @@ class State(object):
         print(self._tableList([(tid, self.tables[tid]) for tid in self._tablesForRoom(roomId)]))
         return
 
+    def _skillAdd(self, roomId, skillCheckList):
+#        (skillKey, dc, name, description, success, failure) = tuple(skillCheckList)
+        skillKey = skillCheckList[0]
+        # add a skillcheck to a room
+        if not(roomId in self.data["rooms"]):
+            print("Room not found.")
+            return
+
+        if not(skillKey in self.data["skills"]):
+            print("Not a valid skill identifier.")
+            return
+
+
+        if skillKey in self.data["rooms"][roomId]["skill_checks"]:
+            self.data["rooms"][roomId]["skill_checks"].append(skillCheckList)
+        else:
+            self.data["rooms"][roomId]["skill_checks"] = [skillCheckList]
+        return
+
+    def _skillRemove(self, roomId, i):
+        if not(roomId in self.data["rooms"]):
+            print("Room not found.")
+            return
+        skillChecks = self._skillsForRoom(roomId)
+        if len(skillChecks) <= i:
+            print("Could not remove skill: index out of bounds.")
+            return
+
+        del skillChecks[i]
+        return
+
+    def _skill(self, skillKey):
+        return self.data["skills"].get(skillKey, "")
+
+    def _skillsForRoom(self, roomId):
+        if not(roomId in self.data["rooms"]):
+            print("Room not found.")
+            return
+        return self.data["rooms"][roomId].get("skill_checks", [])
+
+    def skillAdd(self, args):
+        # adds a skill to a room, always uses the current room
+        # a skill check is a tuple of skillKey, dc, name, description, success and failure.
+        
+        room = self.currentRoom()
+        #prompt for skill type
+        skillkey = ""
+        while not(skillkey  in self.data['skills']):
+            for (k, s) in self.data['skills'].items():
+                print("  " + k + ") " + s)
+            skillkey = input("Enter choice of skill:")
+            if skillkey == "q":
+                print("Aborting.")
+                return
+                  
+        #DC
+        dc = ""
+        while not(dc.isnumeric()):
+            dc = input("Difficulty of skill check:")
+            if dc == "q":
+                print("Aborting.")
+                return
+
+        dc = int(dc)
+        #name
+        name = input("How to name this skillcheck:")
+        #description, success and failure
+        description = multilineInput("Enter description (two newlines to submit, empty newline to skip):\n")
+        success = multilineInput("Enter success result:\n")
+        failure = multilineInput("Enter failure result:\n")
+
+        # all checks out
+        self._skillAdd(self.currentRoom()['id'], [skillkey, dc, name, description, success, failure])
+        return
+
+    def _skillShow(self, skillCheckList):
+        # return a string that can describe a given skillchecks
+        (skillKey, dc, name, desc, success, failure) = tuple(skillCheckList)
+        w = "\n"
+        w += name + "\nDC " + str(dc) + " " + self.data["skills"][skillKey] + " check\n"
+        w += desc + "\nOn success: " + success + "\nOn Failure: " + failure + "\n"
+        return w
+
+    def skillList(self, args):
+        # list skills for current room, no args
+        skillChecks = self._skillsForRoom(self.currentRoom()['id'])
+        if not(skillChecks):
+            print("No skillchecks in this room.")
+            return
+
+        # currently we give a longform description for all skillchecks
+        for s in skillChecks:
+            print(self._skillShow(s))
+        return 
+            
+
 ########
 # Some friend functions
 #########
@@ -686,7 +791,9 @@ commands_full = {
     "te" : (["[TABLEID]", "Table edit. If no argument is specified, will pick table from current room. Otherwise, opens edit dialogue for specified TABLEID."], lambda s, ws: s.tableEdit(ws)),
     "ta" : (["TABLEID", "[ROOMID]", "Table add. Adds an existing table, specified by TABLEID, to a room. If ROOMID is specified, add table to that room if it exists, otherwise, adds table to the current room."], lambda s, ws: s.tableAdd(ws)),
     "tremove" : (["[TABLEID | TABLEID ROOMID]", "Table remove. Removes a table from a room, though the table itself remains in the global list. If no arguments are specified, tries to find a table in the current room and remove it. If TABLEID is specified on its own, tries to remove a table with that id from the current room. If both TABLEID and ROOMID are specified, tries to remove the specified table from the specified room."], lambda s, ws: s.tableRemove(ws)),
-    "tl" : (["[ROOMID]", "Table list. List tables for a specific room. If ROOMID is not specified, lists tables for the current room. For a global list of tables, see tgl."], lambda s, ws: s.tableList(ws))
+    "tl" : (["[ROOMID]", "Table list. List tables for a specific room. If ROOMID is not specified, lists tables for the current room. For a global list of tables, see tgl."], lambda s, ws: s.tableList(ws)),
+        "sa" : (["Skillcheck Add. Add a skillcheck to the current room. Includes name, dc, description, success and failure states. All parameters acquired via prompt."], lambda s, ws: s.skillAdd(ws)),
+            "sl" : (["Skillcheck list. List all skillchecks in current room."], lambda s, ws: s.skillList(ws))
     }
 
 
